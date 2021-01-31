@@ -593,8 +593,7 @@ div.teamBio{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: #979797;
-	display: none;
+	opacity: 0;
 }
 
 div.circular-portrait{
@@ -603,10 +602,26 @@ div.circular-portrait{
 	height: 500px;
 	overflow: hidden;
 	border-radius: 50%;
+	background-color: #ffffff;
 }
 
 .circular-portrait img{
 	width: 100%;
 	height: auto;
-	
+}
+
+.circular-portrait:hover img{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.circular-portrait:hover {
+	background-color: #9e9e9e;
+	transition: background-color 0.5s ease;
+}
+
+
+.circular-portrait:hover > div{
+	opacity: 1; 
+    transition: opacity 0.5s ease;
 }
