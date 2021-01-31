@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--
+Template Name: Bistup
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>LinkedLounge | The Team</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<style type="text/css">
+/* DEMO ONLY */
+.container .demo{text-align:center;}
+.container .demo div{padding:8px 0;}
+.container .demo div:nth-child(odd){color:#FFFFFF; background:#CCCCCC;}
+.container .demo div:nth-child(even){color:#FFFFFF; background:#979797;}
+@media screen and (max-width:900px){.container .demo div{margin-bottom:0;}}
+/* DEMO ONLY */
+</style>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+	$(function(document){
+		$("#headerIns").load("genericDocumentWrappers.html #headerIns"); 
+		$("#footerIns").load("genericDocumentWrappers.html #footerIns"); 
+	  
+		var pages = document.getElementById("mainav").getElementsByTagName("li");
+
+		// Loop through the buttons and add the active class to the current/clicked button
+		for (var i = 0; i < pages.length; i++) {
+		  if(pages[i].classList.contains("active")){
+				pages[i].className.replace("active", "");
+				console.log("replacing active");
+		  }
+		  
+		  if(pages[i].firstChild.text == "The Team"){
+				pages[i].className.replace("", "active");
+				console.log(pages[i].has("a").text());
+		  }
+		}
+		
+		
+    });
+	
+	
+	
+</script>
+
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div id="headerIns">
+</div>
+<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+  <div id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <h6 class="heading">The Team</h6>
+    <!-- ################################################################################################ -->
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">The Team</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+    
+      <!-- ################################################################################################ -->
+      <div class="group btmspace-50 demo">
+        <div class="one teamMember">
+		<div class="teamPic circular-portrait">
+			<img src="images/ferneticus.png"/>
+			<div class="teamBio">
+			One could say adventure is my middle name, and they would be right. For me, life is nothing but one huge adventure with a new deal around every corner! I negotiated for my first gems when I was just a wee gnome, and now I consort with the largest organization of gem merchants in the gnome, heh, I mean known, universe! If you want to link, this lounge is for you, and I welcome you wholeheartedly, after you pay your dues, of course. 
+			</div>
+		</div>
+		
+		<h3> Ferneticus Brimsocket </h3>
+		<h2> Founder, CEO and Chair of the Board</h2>
+			
+		</div>
+      </div>
+	  <h2>The Executives</h2>
+      <!-- ################################################################################################ -->
+      <div class="group btmspace-50 demo">
+        <div class="one_half first">
+			
+			<div class="teamBio">
+			Hee hee! Pedaltrick is my name, liquid assets are my game! I’ve been managing the Linked Lounge’s finances for years, and it’s all in safe hands. Trust this gnome, I’m always in the financial zone!
+
+			</div>
+		</div>
+        <div class="one_half">
+		
+			<div class="teamBio">
+			Just really glad to be a part of this. Linking has been a vital part of my career, especially with my work for Fred Claus, so I’m happy to be providing others with this same opportunity to hustle and grind to the top. 
+			</div>
+		</div>
+      </div>
+	  
+      <div class="group btmspace-50 demo">
+        <div class="one_half first">Supreme Airmaxes</div>
+        <div class="one_half">Ken Ijima</div>
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div id = "footerIns">
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script>
+	$('.teamPic').on('mouseenter',function() {
+		  var text =$(this).children(".teamBio");
+		  text.show();
+	});
+
+	$('.teamPic').on('mouseleave',function() {
+		var text =$(this).children(".teamBio");
+		text.hide();
+	});
+	</script>
+</body>
+</html>

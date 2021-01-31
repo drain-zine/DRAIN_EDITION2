@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+          type="text/css"
+          href="test.css" />
+    <title>DRAIN Magazine</title>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154153463-1"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-154153463-1');</script>
+
+    <script>// fading
+$(document).ready(function(){
+	$("#pubBodyDiv").hide();
+	$("#pubBodyDiv").fadeIn(1500);
+
+
+    $("#exitButton").mouseover(function () {
+        console.log("mouse on");
+        $(this).delay(1000).attr('src', 'res/dynamic/cheers.gif');
+    });
+
+    $("#exitButton").mouseout(function () {
+        console.log("mouse off");
+        $(this).delay(1000).attr('src', "res/dynamic/cheersStill.gif");
+    });
+
+    $("#exitButton").click(function () {
+        console.log("click!");
+        const audio = new Audio("res/sound/cheers.mp3");
+        audio.play();
+       // $("#introBodyDiv").fadeOut(6000);
+       setTimeout('window.open(\'welcomeTraveller.html\', \'_self\')', 2000);
+    });
+	
+	function rollDice() {
+	var score = 0;
+  const dice = [...document.querySelectorAll(".die-list")];
+  dice.forEach(die => {
+    toggleClasses(die);
+    die.dataset.roll = getRandomNumber(1, 6);
+	score += parseInt(die.dataset.roll);
+  });
+  
+  console.log(score);
+  document.getElementById("score").textContent = score.toString();
+  setTimeout(toggleSpeech, 2000, "block");
+  setTimeout(toggleSpeech.bind(null,"none"),4000);
+}
+
+function toggleSpeech(str){
+	console.log(str);
+	document.getElementById("orcSpeech").style.display = str;
+}
+
+function toggleClasses(die) {
+  die.classList.toggle("odd-roll");
+  die.classList.toggle("even-roll");
+}
+
+function getRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+document.getElementById("roll-button").addEventListener("click", rollDice);
+
+
+
+});
+
+</script>
+
+</head>
+<body id="orcs" style="margin: 0;">
+	<div class="header">
+		<div class="headerWrapper">&nbsp;
+		</div>
+		<!--<div class="headerWrapper">
+			<img class="header" src="res/static/headerScroll1.png" width=100% height = 60%><div class="overlay"><p class="Title">Ye Olde Fountain</p><p class="subTitle">The Orcs Playing Dice by the Bar...</div>
+			<audio controls id="headerControls" autoplay loop>
+                <source src="res/sound/orcs.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+		</div>-->
+		
+		<div class="headerWrapper">
+			<div class="headerScroll">
+				<img class="header" src="res/static/headerScroll1.png" width=100% height = 60%>
+				<div class="overlay"><p class="Title">Ye Olde Fountain</p><p class="subTitle">The Orcs Playing Dice by the Bar...</p>
+				<audio controls id="headerControls" autoplay loop>
+                <source src="res/sound/orcs2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+				</div>
+			</div>
+		</div>
+		<div class="headerWrapper">&nbsp
+
+
+            
+   
+		</div>
+
+	</div>
+	<div style="width: 100%; height: 100%;">
+	<div class="sidebar left">
+		<div class="orcSpectator">
+			<div class="orc"><img src="res/dynamic/orc1.gif"/ width=100%></div>
+			<div id="orcSpeech" style="display: none;">
+					<img class="header" src="res/static/speechBubble.png" width=100%>
+					<div class="overlay"><p id = "speechText">Zug Zug, </p><p> nice roll mate!</p></div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="contentWrapper">
+		 <div class="imageWrapper">
+			<img src="res/static/orcsDice.png" width=75%>
+	    </div>
+		<div class="captionWrapper"></div>
+		<div class="content"> 
+			<div class="text">
+				<p>Since you’re in a pub, your mind drifts off to the proverbial “mind-pub,” that is of course 
+	your innermost mental chamber for your thoughts, its dialectical walls lined with taps pouring only the finest muddy ale (not a lager boy, are ye?) someone like yourself can find. Imagining the ouroboric cycle of you holding your Palace Pint Glass, moving from tap to tap, filling your chalice carefully as to not spill any on your Custom “Rick & Morty” Rick Dunks, and sipping, you are startled by the click-clack cacophony of dice on a table. </p>
+	<p>Your attention turns to a few orcs playing what seems to be a classic game of Liar’s Dice. Your orcish is rusty, and you can only catch the faintest glimmer of what they’re saying, but you nonetheless can feel the cool breeze of the sea, smell the deliciously moist socks of a pirate at midday, and listen to the bickering of your crewmates nearby—but this is all now just a distant, but pleasant memory. You’re glad that you got to enjoy those days, wallowing in the filth as a crusading, oceanic desperado, but your taste and inclinations are a little more refined now. You wake up, look in the mirror, and vocalize “Clean.” You think these orcs would definitely inspire a hype but chill Bearbrick. </p>
+		<p>What was that? It’s hard to remember sometimes. You walk over to the orcs, who have now noticed you staring at them, and take a seat...</p>
+			</div>
+		</div>
+		
+		<div class="diceWrapper">
+			<div class="dice">
+			  <ol class="die-list even-roll" data-roll="1" id="die-1">
+				<li class="die-item" data-side="1">
+				  <span class="dot"></span>
+				</li>
+				<li class="die-item" data-side="2">
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				</li>
+				<li class="die-item" data-side="3">
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				</li>
+				<li class="die-item" data-side="4">
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				</li>
+				<li class="die-item" data-side="5">
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				</li>
+				<li class="die-item" data-side="6">
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				</li>
+			  </ol>
+			  <ol class="die-list odd-roll" data-roll="1" id="die-2">
+				<li class="die-item" data-side="1">
+				  <span class="dot"></span>
+				</li>
+				<li class="die-item" data-side="2">
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				</li>
+				<li class="die-item" data-side="3">
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				</li>
+				<li class="die-item" data-side="4">
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				</li>
+				<li class="die-item" data-side="5">
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				</li>
+				<li class="die-item" data-side="6">
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				  <span class="dot"></span>
+				</li>
+			  </ol>
+			</div>
+			
+			<div class="buttonWrapper">
+				<button type="button" id="roll-button">Roll Dice</button>
+			</div>
+			
+        </div>
+	</div>
+	
+	<div class="sidebar right">
+		<img class="sidebarImg" id="exitButton" src="res/dynamic/cheersStill.gif" />Return To The Bar...
+		
+		<div class="scoreboardWrapper">
+			<div class="scoreboard"><img src="res/static/parchment.png"/ width=100%></div>
+			<div class="overlay"><p id="scoreText">Score: <span id="score">0</span></p></div>
+		</div>
+	</div>
+	
+	</div>
+
+</body>
