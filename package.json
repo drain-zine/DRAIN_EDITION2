@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A zine for cool cats",
   "scripts": {
-    "lint": "prettier -w ."
+    "lint": "prettier --ignore-path .gitignore -w ."
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,15 @@
     "url": "https://github.com/drain-zine/DRAIN_EDITION2/issues"
   },
   "homepage": "https://github.com/drain-zine/DRAIN_EDITION2#readme",
-  "dependencies": {
-    "prettier": "^2.2.1"
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "husky": "^4.3.8",
+    "pretty-quick": "^3.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
