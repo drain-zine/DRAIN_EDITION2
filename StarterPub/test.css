@@ -1,219 +1,213 @@
-:root{
-	--contentWrapperWidth: 60%;
-	--sidebarWidth: 20%; /* calc(100% - (var(--contentWrapperWidth)/2)) */
+:root {
+  --contentWrapperWidth: 60%;
+  --sidebarWidth: 20%; /* calc(100% - (var(--contentWrapperWidth)/2)) */
 }
 
 @font-face {
-    font-family: medievalParagraph;
-    src: url("res/fonts/EnchantedLand.otf");
+  font-family: medievalParagraph;
+  src: url("res/fonts/EnchantedLand.otf");
 }
 
 @font-face {
-    font-family: medievalHeading;
-    src: url("res/fonts/OldLondon.ttf");
+  font-family: medievalHeading;
+  src: url("res/fonts/OldLondon.ttf");
 }
 
-html, body {
+html,
+body {
   height: 100%;
-  //min-height: 100vh;
+  /* min-height: 100vh; */
   margin: 0;
 }
 
 body#orcs {
-    background-image: url("res/static/pub.jpg");
-    background-repeat: repeat;
-    //background-size: auto;
-   
-    //background-color: black;
+  background-image: url("res/static/pub.jpg");
+  background-repeat: repeat;
+  /* background-size: auto; */
 
-	
+  /* background-color: black; */
 }
 
-body#goblinPhilosopher{
-	background-color: black;
-	min-height: 100vh;
+body#goblinPhilosopher {
+  background-color: black;
+  min-height: 100vh;
 }
 
-div.header{
-	width: 100%;
-	
-	text-align: center;
-	justify-content: center;
-	align-content: center;
-	
-	float: top;
-	
-    vertical-align: middle;
-    font-family: medievalHeading;
-    font-size: 300%;
-    position: relative;
-    color: #b30000;
-	display: flex;
+div.header {
+  width: 100%;
+
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+
+  float: top;
+
+  vertical-align: middle;
+  font-family: medievalHeading;
+  font-size: 300%;
+  position: relative;
+  color: #b30000;
+  display: flex;
 }
 
-div#goblinHeader{
-	background-image: url("res/static/busyTavern.jpg");
-	background-image: no-repeat;
-	background-image: cover;
-	
-	height: 600px;
+div#goblinHeader {
+  background-image: url("res/static/busyTavern.jpg");
+  background-image: no-repeat;
+  background-image: cover;
+
+  height: 600px;
 }
 
-div#goblinSidebarLeft{
-	background-image: url("res/static/leftBack.gif");
-	background-repeat: repeat-y;
-		
+div#goblinSidebarLeft {
+  background-image: url("res/static/leftBack.gif");
+  background-repeat: repeat-y;
 }
 
-div#goblinSidebarRight{
-	background-image: url("res/static/rightBack.gif");
-	background-repeat: repeat-y;
-	background-position-x: right;	
+div#goblinSidebarRight {
+  background-image: url("res/static/rightBack.gif");
+  background-repeat: repeat-y;
+  background-position-x: right;
 }
 
-div.sidebar{
-	height: 100%;
-	width: var(--sidebarWidth);
-	
-	//background-color: blue;
-	position: absolute;
-	top: 0;
-	margin: 0;
-	
+div.sidebar {
+  height: 100%;
+  width: var(--sidebarWidth);
+
+  /* background-color: blue; */
+  position: absolute;
+  top: 0;
+  margin: 0;
 }
 
-.left{
-	left: 0;
-	
+.left {
+  left: 0;
 }
 
-.metalOverlay{
-	width: 100%;
-	z-index: 5;
-	height: 15%;
-	position: absolute;
-	bottom: -5%;
-	
-	background-image: url("res/static/topBack.gif");
-	background-repeat: repeat-x;
+.metalOverlay {
+  width: 100%;
+  z-index: 5;
+  height: 15%;
+  position: absolute;
+  bottom: -5%;
+
+  background-image: url("res/static/topBack.gif");
+  background-repeat: repeat-x;
 }
 
-.right{
-	text-align: center;
-    color: white;
-	right: 0;
+.right {
+  text-align: center;
+  color: white;
+  right: 0;
 }
 
-img.sidebarImg{
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /*height: 100%;*/
-    width: 70%;
-	padding-top: 10%;
+img.sidebarImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*height: 100%;*/
+  width: 70%;
+  padding-top: 10%;
 }
 
-div.texturedSidebar{
-	margin-top: 30%;
-	left: -50%;
-	position: relative;
-	
+div.texturedSidebar {
+  margin-top: 30%;
+  left: -50%;
+  position: relative;
 }
 
-div.contentWrapper{
-	//height: 500px;
-	left: 50%;
-	width: var(--contentWrapperWidth);
-	
-	text-align: center;
-	justify-content: center;
-	align-content: center;
-	margin: auto;
+div.contentWrapper {
+  /* height: 500px; */
+  left: 50%;
+  width: var(--contentWrapperWidth);
+
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
 }
 
-div.imageWrapper{
-	display: inline-block;
+div.imageWrapper {
+  display: inline-block;
 }
 
-div.captionWrapper{
-	
+div.captionWrapper {
 }
 
-div.diceWrapper{
-	
+div.diceWrapper {
 }
 
-div.headerWrapper{
-	flex: 1;
+div.headerWrapper {
+  flex: 1;
 }
 
-div.headerScroll{
-	justify-content: center;
-	align-content: center;
-	text-align: center;
-	
-	position: relative;
-	
+div.headerScroll {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+
+  position: relative;
 }
 
-audio{
-	background-image: url("res/static/audioScroll.png");
+audio {
+  background-image: url("res/static/audioScroll.png");
 }
 
-div.titleScroll{
-	//position: relative;
+div.titleScroll {
+  /* position: relative; */
 }
 
-div.contentWrapper{}
-
-div.content{
-	margin-top: 5%; margin-bottom: 5%;
+div.contentWrapper {
 }
 
-div.text{
-	font-family: serif;
-    color: white;
-    text-align: center;
-    font-size: 115%;
-	margin-left: 15%; margin-right: 15%;
-	padding-left: 5%; padding-right: 5%;
-	padding-top: 1%; padding-bottom: 1%;
-	background-image: url("res/static/darkWoodBack.png");
+div.content {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+div.text {
+  font-family: serif;
+  color: white;
+  text-align: center;
+  font-size: 115%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-image: url("res/static/darkWoodBack.png");
 }
 
 .overlay {
-	/*
+  /*
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 	width: 100%;
 	height: 100%;*/
-	
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: 2;
-	top: 0%
-	
-	
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 0%;
 }
 
-p.Title{
-	margin-bottom: 5px;
+p.Title {
+  margin-bottom: 5px;
 }
-p.subTitle{
-	font-size: 50%;
-	margin-top: 5px;
-	font: medievalHeading;
+p.subTitle {
+  font-size: 50%;
+  margin-top: 5px;
+  font: medievalHeading;
 }
 
 /* DICE */
-.diceWrapper{
-	text-align: center;
-	justify-content: center;
+.diceWrapper {
+  text-align: center;
+  justify-content: center;
 }
-
 
 .dice {
   align-items: center;
@@ -224,11 +218,11 @@ p.subTitle{
   justify-content: center;
   padding: 3%;
   perspective: 600px;
-  
-  	text-align: center;
-	justify-content: center;
-	
-	transform: translate(15%,0%);
+
+  text-align: center;
+  justify-content: center;
+
+  transform: translate(15%, 0%);
 }
 
 .die-list {
@@ -238,9 +232,9 @@ p.subTitle{
   height: 6rem;
   list-style-type: none;
   transform-style: preserve-3d;
-   width: 6rem;
-  //margin: auto;
-  
+  width: 6rem;
+  /* margin: auto; */
+
   justify-content: center;
 }
 
@@ -267,7 +261,6 @@ p.subTitle{
   padding: 1rem;
   width: 100%;
   margin: auto;
-  
 }
 
 .dot {
@@ -408,8 +401,6 @@ button {
   font-weight: 700;
   justify-self: center;
   padding: 0.5rem 1rem;
-
-	
 }
 button:hover {
   cursor: pointer;
@@ -421,70 +412,67 @@ button:hover {
   }
 }
 
-.orcSpectator{
-	height: 300px;
-	width: 500px;
-	//background-color: blue;
-	top: 125%;
-	position: relative;
-	left: 15%;
+.orcSpectator {
+  height: 300px;
+  width: 500px;
+  /* background-color: blue; */
+  top: 125%;
+  position: relative;
+  left: 15%;
 }
 
-.orc{
-	height: 300px;
-	width: 300px;
-	//background-color: blue;
-	float: left;
-	position: relative;
-	z-index: 1;
+.orc {
+  height: 300px;
+  width: 300px;
+  /* background-color: blue; */
+  float: left;
+  position: relative;
+  z-index: 1;
 }
-#orcSpeech{
-	height: 100px;
-	width: 200px;
-	float: left;
-	left: -20%;
-	top: -20%;
-	text-align: center;
-	font-family: medievalHeading;
+#orcSpeech {
+  height: 100px;
+  width: 200px;
+  float: left;
+  left: -20%;
+  top: -20%;
+  text-align: center;
+  font-family: medievalHeading;
 
-	position: relative;
-}
-
-
-
-#speechText{
-	
+  position: relative;
 }
 
-.scoreboardWrapper{
-	height: 300px;
-	width: 300px;
-	top: 105%;
-	position: relative;
-	left: -10%;
+#speechText {
 }
 
-.scoreboard{
-	height: 300px;
-	width: 300px;
-	//background-color: blue;
-	float: left;
-	position: relative;
-	z-index: 1;
+.scoreboardWrapper {
+  height: 300px;
+  width: 300px;
+  top: 105%;
+  position: relative;
+  left: -10%;
 }
 
-#scoreText{
-	text-align: center;
-	font-family: medievalHeading;
-
-	position: relative;
-	top: 20%;
-	font-size: 150%;
-	color: red;
+.scoreboard {
+  height: 300px;
+  width: 300px;
+  /* background-color: blue; */
+  float: left;
+  position: relative;
+  z-index: 1;
 }
 
-img#philosopher{
-	margin-top: 10%;
+#scoreText {
+  text-align: center;
+  font-family: medievalHeading;
+
+  position: relative;
+  top: 20%;
+  font-size: 150%;
+  color: red;
+}
+
+img#philosopher {
+  margin-top: 10%;
 }
 
 /**************************************
@@ -492,53 +480,27 @@ img#philosopher{
 **************************************/
 
 .clearfix:after {
+  content: ".";
 
+  display: block;
 
-    content: ".";
+  clear: both;
 
+  visibility: hidden;
 
-    display: block;
+  line-height: 0;
 
-
-    clear: both;
-
-
-    visibility: hidden;
-
-
-    line-height: 0;
-
-
-    height: 0;
-
+  height: 0;
 }
-
- 
-
 
 .clearfix {
-
-
-    display: inline-block;
-
+  display: inline-block;
 }
-
- 
-
 
 html[xmlns] .clearfix {
-
-
-    display: block;
-
+  display: block;
 }
 
- 
-
-
 * html .clearfix {
-
-
-    height: 1%;
-
+  height: 1%;
 }

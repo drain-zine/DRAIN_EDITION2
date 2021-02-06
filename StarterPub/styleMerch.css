@@ -25,9 +25,9 @@
 div#pubBodyDiv {
     background-image: url("res/static/pub.jpg");
     background-repeat: repeat;
-    //background-size: auto;
+    /* background-size: auto; */
     height: max-content;
-    //background-color: black;
+    /* background-color: black; */
 }
 
 
@@ -35,7 +35,7 @@ div#pubCornerDiv {
     background-image: url("res/static/pubCorner3.jpg");
     background-size: cover;
 height: max-content;
-    //background-color: black;
+/* background-color: black; */
 }
 
 
@@ -44,7 +44,7 @@ div#seperatingBannerDiv {
     background-size: auto;
     height: 174px;
     width: max-content
-    //background-color: black;
+    /* background-color: black; */
 }
 
 div#groveBodyDiv {
@@ -52,7 +52,7 @@ div#groveBodyDiv {
     background-size: auto;
     height: 1080px;
     width: max-content
-    //background-color: black;
+/* background-color: black; */
 }
 
 .header {
@@ -72,7 +72,7 @@ div#groveBodyDiv {
     height: 10%;
     top: 50%;
     position: relative;
-    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .headerR {
@@ -141,12 +141,9 @@ img#introCursor {
 .subSideBar {
     float: left;
     width: 50%;
-    text-align: center top: 50%;
+    text-align: center;
+    top: 50%;
     transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
 }
 
 img.header {
@@ -167,7 +164,7 @@ img.headerL {
     top: 50%;
     position: relative;
     
-    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 img.sidebar {
@@ -195,7 +192,7 @@ img#rotate {
     right: 5%;
     top: 1%;
     bottom: 50px;
-    //transform: translate(-50%, -50%);
+/* transform: translate(-50%, -50%); */
     font-family: medievalParagraph;
     font-size: 150%;
 }
@@ -233,14 +230,14 @@ img#pouch {
     width: 60%;
     top: 50%;
     position: relative;
-    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #headerControls {
     float: right;
     top: 50%;
     position: relative;
-    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .annotationLink{
@@ -251,7 +248,7 @@ img#pouch {
 #borderOverlay{
 	position:absolute;
 text-align: center;
-	-webkit-transform: translateY(-15%);
+	transform: translateY(-15%);
 background-repeat: repeat-x;
     background-image: url("res/dynamic/starBorder.gif");
     width: 100%;
