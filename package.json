@@ -1,0 +1,20 @@
+{
+  "name": "drainzine",
+  "version": "1.0.0",
+  "description": "A zine for cool cats",
+  "scripts": {
+    "lint": "prettier -w ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drain-zine/DRAIN_EDITION2.git"
+  },
+  "author": "drainzine contributors",
+  "bugs": {
+    "url": "https://github.com/drain-zine/DRAIN_EDITION2/issues"
+  },
+  "homepage": "https://github.com/drain-zine/DRAIN_EDITION2#readme",
+  "dependencies": {
+    "prettier": "^2.2.1"
+  }
+}
