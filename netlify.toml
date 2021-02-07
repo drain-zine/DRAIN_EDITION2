@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/"
+  to = "/overworld.html"
+  status = 302
+  force = false
