@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A zine for cool cats",
   "scripts": {
-    "lint": "prettier --ignore-path .gitignore -w ."
+    "serve": "eleventy --serve",
+    "lint": "prettier -w ."
   },
   "repository": {
     "type": "git",
