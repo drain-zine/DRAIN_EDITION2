@@ -1,0 +1,22 @@
+---
+title: "...DOWN THE DRAIN..."
+permalink: /{{page.filePathStem}}.html
+---
+
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#">
+    <head>
+        {% include "head.njk" %}
+
+        <link rel="stylesheet" type="text/css" href="/styles/utilites.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/variables.css" />
+        <link rel="stylesheet" type="text/css" href="/styles{{page.filePathStem}}.css" />
+
+        {{ headScript | safe }}
+    
+    </head>
+
+    <body style="margin: 0">
+        {{ content | safe }}
+    </body>
+</html>

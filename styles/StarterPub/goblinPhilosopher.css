@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: medievalParagraph;
-  src: url("res/fonts/EnchantedLand.otf");
+  src: url("/res/fonts/EnchantedLand.otf");
 }
 
 @font-face {
   font-family: medievalHeading;
-  src: url("res/fonts/OldLondon.ttf");
+  src: url("/res/fonts/OldLondon.ttf");
 }
 
 html,
@@ -18,17 +18,6 @@ body {
   height: 100%;
   /* min-height: 100vh; */
   margin: 0;
-}
-
-body#orcs {
-  background-image: url("res/static/pub.jpg");
-  background-repeat: repeat;
-  /* background-size: auto; */
-
-  /* background-color: black; */
-}
-
-body#goblinPhilosopher {
   background-color: black;
   min-height: 100vh;
 }
@@ -51,7 +40,7 @@ div.header {
 }
 
 div#goblinHeader {
-  background-image: url("res/static/busyTavern.jpg");
+  background-image: url("/res/StarterPub/static/busyTavern.jpg");
   background-image: no-repeat;
   background-image: cover;
 
@@ -59,12 +48,12 @@ div#goblinHeader {
 }
 
 div#goblinSidebarLeft {
-  background-image: url("res/static/leftBack.gif");
+  background-image: url("/res/StarterPub/static/leftBack.gif");
   background-repeat: repeat-y;
 }
 
 div#goblinSidebarRight {
-  background-image: url("res/static/rightBack.gif");
+  background-image: url("/res/StarterPub/static/rightBack.gif");
   background-repeat: repeat-y;
   background-position-x: right;
 }
@@ -90,7 +79,7 @@ div.sidebar {
   position: absolute;
   bottom: -5%;
 
-  background-image: url("res/static/topBack.gif");
+  background-image: url("/res/StarterPub/static/topBack.gif");
   background-repeat: repeat-x;
 }
 
@@ -149,7 +138,7 @@ div.headerScroll {
 }
 
 audio {
-  background-image: url("res/static/audioScroll.png");
+  background-image: url("/res/StarterPub/static/audioScroll.png");
 }
 
 div.titleScroll {
@@ -175,7 +164,7 @@ div.text {
   padding-right: 5%;
   padding-top: 1%;
   padding-bottom: 1%;
-  background-image: url("res/static/darkWoodBack.png");
+  background-image: url("/res/StarterPub/static/darkWoodBack.png");
 }
 
 .overlay {
