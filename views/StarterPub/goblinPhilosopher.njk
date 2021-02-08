@@ -3,159 +3,155 @@ layout: root
 ---
 
 {% block headScript %}
-  <script>
-      // fading
-      $(document).ready(function () {
-        $("#pubBodyDiv").hide()
-        $("#pubBodyDiv").fadeIn(1500)
+<script>
+  // fading
+  $(document).ready(function () {
+    $("#pubBodyDiv").hide()
+    $("#pubBodyDiv").fadeIn(1500)
 
-        $("#exitButton").mouseover(function () {
-          console.log("mouse on")
-          $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheers.gif")
-        })
+    $("#exitButton").mouseover(function () {
+      console.log("mouse on")
+      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheers.gif")
+    })
 
-        $("#exitButton").mouseout(function () {
-          console.log("mouse off")
-          $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheersStill.gif")
-        })
+    $("#exitButton").mouseout(function () {
+      console.log("mouse off")
+      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheersStill.gif")
+    })
 
-        $("#exitButton").click(function () {
-          console.log("click!")
-          const audio = new Audio("/res/StarterPub/sound/cheers.mp3")
-          audio.play()
-          // $("#introBodyDiv").fadeOut(6000);
-          setTimeout("window.open('welcomeTraveller.html', '_self')", 2000)
-        })
-      })
-    </script>
-{% endblock %}
-
-{% block content %}
-    <div class="header" id="goblinHeader">
-      <div class="headerWrapper">&nbsp;</div>
-      <!--<div class="headerWrapper">
-			<img class="header" src="res/static/headerScroll1.png" width=100% height = 60%><div class="overlay"><p class="Title">Ye Olde Fountain</p><p class="subTitle">The Orcs Playing Dice by the Bar...</div>
+    $("#exitButton").click(function () {
+      console.log("click!")
+      const audio = new Audio("/res/StarterPub/sound/cheers.mp3")
+      audio.play()
+      // $("#introBodyDiv").fadeOut(6000);
+      setTimeout("window.open('welcomeTraveller.html', '_self')", 2000)
+    })
+  })
+</script>
+{% endblock %} {% block content %}
+<div class="header" id="goblinHeader">
+  <div class="headerWrapper">&nbsp;</div>
+  <!--<div class="headerWrapper">
+			<img class="header" src="/res/StarterPub/static/headerScroll1.png" width=100% height = 60%><div class="overlay"><p class="Title">Ye Olde Fountain</p><p class="subTitle">The Orcs Playing Dice by the Bar...</div>
 			<audio controls id="headerControls" autoplay loop>
-                <source src="res/sound/orcs.mp3" type="audio/mpeg">
+                <source src="/res/StarterPub/sound/orcs.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
 		</div>-->
 
-      <div class="headerWrapper">
-        <div class="headerScroll">
-          <img
-            class="header"
-            src="/res/StarterPub/static/headerScroll1.png"
-            width="100%"
-            height="60%"
-          />
-          <div class="overlay">
-            <p class="Title">Ye Olde Fountain</p>
-            <p class="subTitle">The Dapper Goblin By The Bar...</p>
-            <audio controls id="headerControls" autoplay loop>
-              <source src="/res/StarterPub/sound/chap.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        </div>
+  <div class="headerWrapper">
+    <div class="headerScroll">
+      <img
+        class="header"
+        src="/res/StarterPub/static/headerScroll1.png"
+        width="100%"
+        height="60%"
+      />
+      <div class="overlay">
+        <p class="Title">Ye Olde Fountain</p>
+        <p class="subTitle">The Dapper Goblin By The Bar...</p>
+        <audio controls id="headerControls" autoplay loop>
+          <source src="/res/StarterPub/sound/chap.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
       </div>
-      <div class="headerWrapper">&nbsp</div>
-
-      <div class="metalOverlay"></div>
     </div>
-    <div class="clearfix" style="position: relative">
-      <div class="sidebar left" id="goblinSidebarLeft">&nbsp;</div>
+  </div>
+  <div class="headerWrapper">&nbsp</div>
 
-      <div class="contentWrapper">
-        <div class="imageWrapper">
-          <img
-            src="/res/StarterPub/static/goblinPhilosopher.png"
-            width="75%"
-            id="philosopher"
-          />
-        </div>
-        <div class="captionWrapper"></div>
-        <div class="content">
-          <div class="text">
-            <p>
-              As you look around the pub, you spy an erudite-seeming, but
-              tattered-looking goblin sitting at a table perfectly in the
-              center, vulgarly fondling its nether reasons. Although disgusted,
-              you can’t turn away. What is this goblin doing? Continuing to
-              watch, you see it pull a ratty tome from down below, one so vile
-              that green cartoonish stink lines actively shoot out of it. The
-              goblin sips from a mug with a foul and dark crystalline liquid in
-              it and belches loudly.
-            </p>
-            <p>
-              “Hm, Sanchez! Theories of time travel here. Wormhole. Dialectic.
-              Where’s my spork, heh. Humph!” mumbles this musty fellow.
-            </p>
-            <p>
-              This all sounds familiar, but you conclude that this goblin must
-              just be a nerd. “I heard that! Hragh hrupgh” coughs the goblin as
-              it turns to you. “You think I’m a nerd? I can hear your thoughts
-              my friend... my mind is a proverbial and literal panopticon, come
-              come, I must tell you something. Perhaps you won’t think I’m a
-              nerd after I bestow this knowledge upon you.”
-            </p>
-            <p>
-              You find yourself captivated by this goblin’s turn into linguistic
-              lucidity and decide to make your way over.
-            </p>
-            <p>
-              “Pube?” the goblin asks, extending a hair inexplicably connected
-              in the form of a perfect ouroboros. “The snake eats itself.
-              Two-heads. From consumption comes life. Do you understand?”
-            </p>
-            <p>You shake your head ambivalently.</p>
-            <p>
-              “BRECHT” belches the goblin, throwing the pube into the air. “No
-              no no no, not the philosopher you two-legged numbskull, that’s
-              just my ale speaking.” It smirks. “Are we the performers, or are
-              we the audience? Reach into my pocket. You already have! The world
-              is my pocket. Space is relative. Take a sip of my drink, and
-              you’ll understand.”
-            </p>
-            <p>
-              The goblin’s pubic hair floats with a feather-like serenity onto
-              the bridge of your nose. You sneeze. You reach for the goblin’s
-              beer, but it snatches it away.
-            </p>
-            <p>
-              “No! You don’t understand! This IS the dialectic, but you’ll never
-              see that if you keep drinking lager! Let me check my notes...” The
-              goblin checks its notes. “Hm, yes, all going according to plan.
-              Noted. Yes. Shoo now, I must return to my studies.”
-            </p>
-            <p>
-              The goblin throws its mug at your head, which you narrowly dodge.
-              You don’t hear the glass breaking anywhere.
-            </p>
-            <p>
-              “Hm, interesting.” It belches. “Transmutation. Pure air. element.
-              Coexist. Jerry. Brecht. I MEAN him this time. Good. GO!”
-            </p>
-            <p>
-              You leave this goblin be and return to your table, unsure whether
-              you’ve become enlightened or just more confused. Feeling an itch
-              behind your ear, you reach to scratch it, only to find the
-              goblin’s self-consuming pube somehow there...
-            </p>
-          </div>
-        </div>
-      </div>
+  <div class="metalOverlay"></div>
+</div>
+<div class="clearfix" style="position: relative">
+  <div class="sidebar left" id="goblinSidebarLeft">&nbsp;</div>
 
-      <div class="sidebar right" id="goblinSidebarRight">
-        <div class="texturedSidebar">
-          <img
-            class="sidebarImg"
-            id="exitButton"
-            src="/res/StarterPub/dynamic/cheersStill.gif"
-            style="left: 5%"
-          />Return To The Bar...
-        </div>
-      </div>
-      <div style="clear: both"></div>
+  <div class="contentWrapper">
+    <div class="imageWrapper">
+      <img
+        src="/res/StarterPub/static/goblinPhilosopher.png"
+        width="75%"
+        id="philosopher"
+      />
     </div>
+    <div class="captionWrapper"></div>
+    <div class="content">
+      <div class="text">
+        <p>
+          As you look around the pub, you spy an erudite-seeming, but
+          tattered-looking goblin sitting at a table perfectly in the center,
+          vulgarly fondling its nether reasons. Although disgusted, you can’t
+          turn away. What is this goblin doing? Continuing to watch, you see it
+          pull a ratty tome from down below, one so vile that green cartoonish
+          stink lines actively shoot out of it. The goblin sips from a mug with
+          a foul and dark crystalline liquid in it and belches loudly.
+        </p>
+        <p>
+          “Hm, Sanchez! Theories of time travel here. Wormhole. Dialectic.
+          Where’s my spork, heh. Humph!” mumbles this musty fellow.
+        </p>
+        <p>
+          This all sounds familiar, but you conclude that this goblin must just
+          be a nerd. “I heard that! Hragh hrupgh” coughs the goblin as it turns
+          to you. “You think I’m a nerd? I can hear your thoughts my friend...
+          my mind is a proverbial and literal panopticon, come come, I must tell
+          you something. Perhaps you won’t think I’m a nerd after I bestow this
+          knowledge upon you.”
+        </p>
+        <p>
+          You find yourself captivated by this goblin’s turn into linguistic
+          lucidity and decide to make your way over.
+        </p>
+        <p>
+          “Pube?” the goblin asks, extending a hair inexplicably connected in
+          the form of a perfect ouroboros. “The snake eats itself. Two-heads.
+          From consumption comes life. Do you understand?”
+        </p>
+        <p>You shake your head ambivalently.</p>
+        <p>
+          “BRECHT” belches the goblin, throwing the pube into the air. “No no no
+          no, not the philosopher you two-legged numbskull, that’s just my ale
+          speaking.” It smirks. “Are we the performers, or are we the audience?
+          Reach into my pocket. You already have! The world is my pocket. Space
+          is relative. Take a sip of my drink, and you’ll understand.”
+        </p>
+        <p>
+          The goblin’s pubic hair floats with a feather-like serenity onto the
+          bridge of your nose. You sneeze. You reach for the goblin’s beer, but
+          it snatches it away.
+        </p>
+        <p>
+          “No! You don’t understand! This IS the dialectic, but you’ll never see
+          that if you keep drinking lager! Let me check my notes...” The goblin
+          checks its notes. “Hm, yes, all going according to plan. Noted. Yes.
+          Shoo now, I must return to my studies.”
+        </p>
+        <p>
+          The goblin throws its mug at your head, which you narrowly dodge. You
+          don’t hear the glass breaking anywhere.
+        </p>
+        <p>
+          “Hm, interesting.” It belches. “Transmutation. Pure air. element.
+          Coexist. Jerry. Brecht. I MEAN him this time. Good. GO!”
+        </p>
+        <p>
+          You leave this goblin be and return to your table, unsure whether
+          you’ve become enlightened or just more confused. Feeling an itch
+          behind your ear, you reach to scratch it, only to find the goblin’s
+          self-consuming pube somehow there...
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar right" id="goblinSidebarRight">
+    <div class="texturedSidebar">
+      <img
+        class="sidebarImg"
+        id="exitButton"
+        src="/res/StarterPub/dynamic/cheersStill.gif"
+        style="left: 5%"
+      />Return To The Bar...
+    </div>
+  </div>
+  <div style="clear: both"></div>
+</div>
 {% endblock %}

@@ -1,11 +1,11 @@
 @font-face {
   font-family: medievalParagraph;
-  src: url("res/fonts/EnchantedLand.otf");
+  src: url("/res/fonts/EnchantedLand.otf");
 }
 
 @font-face {
   font-family: medievalHeading;
-  src: url("res/fonts/OldLondon.ttf");
+  src: url("/res/fonts/OldLondon.ttf");
 }
 
 .grid-container {
@@ -22,7 +22,7 @@
 }
 
 div#pubBodyDiv {
-  background-image: url("res/static/pub8.jpg");
+  background-image: url("/res/StarterPub/static/pub8.jpg");
   background-repeat: repeat;
   /* background-size: auto; */
   height: max-content;
@@ -30,7 +30,7 @@ div#pubBodyDiv {
 }
 
 div#groveBodyDiv {
-  background-image: url("res/static/groveBackground.png");
+  background-image: url("/res/StarterPub/static/groveBackground.png");
   background-size: auto;
   height: max-content;
   /* background-color: black; */
@@ -74,7 +74,7 @@ div#groveBodyDiv {
 
 .mainContentBlock1 {
   grid-area: mainContentBlock1;
-  background: no-repeat url("res/static/table2.jpg") 50% / 100%;
+  background: no-repeat url("/res/StarterPub/static/table2.jpg") 50% / 100%;
   background-position: center top;
   /*background-size: contain;*/
 }
@@ -103,7 +103,7 @@ div#groveBodyDiv {
 
 .mainContentBlock2 {
   grid-area: mainContentBlock2;
-  background-image: url("res/static/darkWoodBack.png");
+  background-image: url("/res/StarterPub/static/darkWoodBack.png");
   background-size: contain;
 }
 

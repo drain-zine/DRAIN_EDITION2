@@ -1,11 +1,11 @@
 @font-face {
   font-family: medievalParagraph;
-  src: url("res/fonts/EnchantedLand.otf");
+  src: url("/res/fonts/EnchantedLand.otf");
 }
 
 @font-face {
   font-family: medievalHeading;
-  src: url("res/fonts/OldLondon.ttf");
+  src: url("/res/fonts/OldLondon.ttf");
 }
 
 .grid-container {
@@ -22,7 +22,7 @@
 }
 
 div#pubBodyDiv {
-  background-image: url("res/static/pub.jpg");
+  background-image: url("/res/StarterPub/static/pub.jpg");
   background-repeat: repeat;
   /* background-size: auto; */
   height: max-content;
@@ -30,14 +30,14 @@ div#pubBodyDiv {
 }
 
 div#pubCornerDiv {
-  background-image: url("res/static/pubCorner3.jpg");
+  background-image: url("/res/StarterPub/static/pubCorner3.jpg");
   background-size: cover;
   height: max-content;
   /* background-color: black; */
 }
 
 div#seperatingBannerDiv {
-  background-image: url("res/static/ForestTopBanner.png");
+  background-image: url("/res/StarterPub/static/ForestTopBanner.png");
   background-size: auto;
   height: 174px;
   width: max-content;
@@ -45,7 +45,7 @@ div#seperatingBannerDiv {
 }
 
 div#groveBodyDiv {
-  background-image: url("res/static/groveBackground2.png");
+  background-image: url("/res/StarterPub/static/groveBackground2.png");
   background-size: auto;
   height: 1080px;
   width: max-content;
@@ -99,7 +99,7 @@ img#introCursor {
 
 .mainContentBlock1 {
   grid-area: mainContentBlock1;
-  background: no-repeat url("res/static/table2.jpg") 50% / 100%;
+  background: no-repeat url("/res/StarterPub/static/table2.jpg") 50% / 100%;
   background-position: center top;
   /*background-size: contain;*/
 }
@@ -128,7 +128,7 @@ img#introCursor {
 
 .mainContentBlock2 {
   grid-area: mainContentBlock2;
-  background-image: url("res/static/darkWoodBack.png");
+  background-image: url("/res/StarterPub/static/darkWoodBack.png");
   background-size: contain;
 }
 
@@ -243,7 +243,7 @@ img#pouch {
   text-align: center;
   transform: translateY(-15%);
   background-repeat: repeat-x;
-  background-image: url("res/dynamic/starBorder.gif");
+  background-image: url("/res/StarterPub/dynamic/starBorder.gif");
   width: 100%;
   height: 100%;
 }
