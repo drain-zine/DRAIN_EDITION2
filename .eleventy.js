@@ -1,8 +1,7 @@
 module.exports = function (eleventyConfig) {
-  resLocations = ["res", "styles"]
-
-  resLocations.map((location) => {
-    eleventyConfig.addPassthroughCopy(location)
+  copyDirectories = ["res", "styles", "LinkedLounge"]
+  copyDirectories.map((path) => {
+    eleventyConfig.addPassthroughCopy(path)
   })
 
   configObject = {
