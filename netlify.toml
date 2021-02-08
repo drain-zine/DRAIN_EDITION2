@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/"
-  to = "/overworld.html"
+  to = "/Overworld/overworld.html"
   status = 302
   force = false
