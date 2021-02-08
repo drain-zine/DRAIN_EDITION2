@@ -4,6 +4,7 @@
   "description": "A zine for cool cats",
   "scripts": {
     "serve": "eleventy --serve",
+    "build": "eleventy",
     "lint": "prettier -w ."
   },
   "repository": {
