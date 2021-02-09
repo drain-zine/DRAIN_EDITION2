@@ -28,4 +28,4 @@
 
   gtag("config", "UA-154153463-1")
 </script>
-<title>{{title}}</title>
+<title>{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}</title>

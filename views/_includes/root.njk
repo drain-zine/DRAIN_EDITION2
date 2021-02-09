@@ -1,10 +1,5 @@
----
-title: "...DOWN THE DRAIN..."
-permalink: /{{page.filePathStem}}.html
----
-
 <!DOCTYPE html>
-<html prefix="og: https://ogp.me/ns#">
+<html prefix="og: https://ogp.me/ns#" lang="{{ site.lang }}">
   <head>
     {% include "head.njk" %}
 
@@ -13,12 +8,12 @@ permalink: /{{page.filePathStem}}.html
     <link rel="stylesheet" type="text/css" href="{{ paths.fileCssHref }}" />
     <link rel="stylesheet" type="text/css" href="{{ paths.parentCssHref }}" />
 
-    {{
-      headScript | safe
-    }}
+    {% block headScript %}
+    {% endblock %}
   </head>
 
   <body style="margin: 0">
-    {{ content | safe }}
+    {% block content %}
+    {% endblock %}
   </body>
 </html>
