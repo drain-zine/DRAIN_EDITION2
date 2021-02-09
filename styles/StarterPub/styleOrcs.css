@@ -1,13 +1,3 @@
-@font-face {
-  font-family: medievalParagraph;
-  src: url("/res/fonts/EnchantedLand.otf");
-}
-
-@font-face {
-  font-family: medievalHeading;
-  src: url("/res/fonts/OldLondon.ttf");
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
