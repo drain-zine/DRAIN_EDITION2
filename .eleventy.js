@@ -1,5 +1,5 @@
 module.exports = function (eleventyConfig) {
-  copyDirectories = ["res", "styles", "LinkedLounge"]
+  copyDirectories = ["res", "LinkedLounge"]
   copyDirectories.map((path) => {
     eleventyConfig.addPassthroughCopy(path)
   })
