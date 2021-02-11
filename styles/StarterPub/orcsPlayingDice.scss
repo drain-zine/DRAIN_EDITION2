@@ -12,169 +12,165 @@ body {
   background-repeat: repeat;
 }
 
-div.header {
-  width: 100%;
+// header styling
+header {
+  .container {
+    /* flex */
+    display: flex;
+    justify-content: center;
 
-  text-align: center;
-  justify-content: center;
-  align-content: center;
+    .headerScroll {
+      vertical-align: middle;
+      text-align: center;
 
-  float: top;
+      font-family: medievalHeading;
+      font-size: 300%;
+      position: relative;
+      color: #b30000;
 
-  vertical-align: middle;
-  font-family: medievalHeading;
-  font-size: 300%;
-  position: relative;
-  color: #b30000;
+      .Title {
+        margin-bottom: 5px;
+      }
+      .subTitle {
+        font-size: 50%;
+        margin-top: 5px;
+        font: medievalHeading;
+      }
+    }
+  }
+}
+
+// main layout styling
+main {
   display: flex;
+  flex-direction: row;
+
+  .left-sidebar {
+    width: var(--sidebarWidth);
+    order: 1;
+    /* height: 300px;  temp */
+  }
+
+  .right-sidebar {
+    width: var(--sidebarWidth);
+    order: 3;
+    /* height: 300px;  temp */
+  }
+
+  .contentWrapper {
+    width: var(--contentWrapperWidth);
+    order: 2;
+    text-align: center;
+    justify-content: center;
+
+    .content {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+
+      // maybe generisize more and move to utility?
+      .text {
+        font-family: serif;
+        color: white;
+        text-align: center;
+        font-size: 115%;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        background-image: url("/res/StarterPub/static/darkWoodBack.png");
+      }
+    }
+  }
 }
 
-div#goblinHeader {
-  background-image: url("res/static/busyTavern.jpg");
-  background-image: no-repeat;
-  background-image: cover;
+// case-specific classes
+.dynamicButton {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*height: 100%;*/
+    width: 70%;
+    padding-top: 10%;
+  }
 
-  height: 600px;
+  p {
+    font-family: MedievalParagraph;
+    color: white;
+    text-align: center;
+  }
 }
 
-div#goblinSidebarLeft {
-  background-image: url("res/static/leftBack.gif");
-  background-repeat: repeat-y;
-}
-
-div#goblinSidebarRight {
-  background-image: url("res/static/rightBack.gif");
-  background-repeat: repeat-y;
-  background-position-x: right;
-}
-
-div.sidebar {
-  height: 100%;
-  width: var(--sidebarWidth);
-
-  /* background-color: blue; */
-  position: absolute;
-  top: 0;
-  margin: 0;
-}
-
-.left {
-  left: 0;
-}
-
-.metalOverlay {
-  width: 100%;
-  z-index: 5;
-  height: 15%;
-  position: absolute;
-  bottom: -5%;
-
-  background-image: url("res/static/topBack.gif");
-  background-repeat: repeat-x;
-}
-
-.right {
-  text-align: center;
-  color: white;
-  right: 0;
-}
-
-img.sidebarImg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /*height: 100%;*/
-  width: 70%;
-  padding-top: 10%;
-}
-
-div.texturedSidebar {
-  margin-top: 30%;
-  left: -50%;
-  position: relative;
-}
-
-div.contentWrapper {
-  /* height: 500px; */
-  left: 50%;
-  width: var(--contentWrapperWidth);
-
-  text-align: center;
+.orcSpectator {
+  display: flex;
   justify-content: center;
-  align-content: center;
-  margin: auto;
+
+  img {
+    z-index: 1;
+  }
+
+  #orcSpeech {
+    // for overlay
+    position: absolute;
+    transform: translate(100%, -100%);
+
+    img {
+      width: 125%;
+    }
+
+    // FIX - feels related to utility.scss not compiling? (ie no ta-center)
+    .dirtyHACK {
+      transform: translate(-20%, -70%);
+    }
+  }
 }
 
-div.imageWrapper {
-  display: inline-block;
-}
-
-div.captionWrapper {
-}
-
-div.diceWrapper {
-}
-
-div.headerWrapper {
-  flex: 1;
-}
-
-div.headerScroll {
+.scoreboardWrapper {
+  display: flex;
   justify-content: center;
-  align-content: center;
-  text-align: center;
 
-  position: relative;
-}
-
-audio {
-  background-image: url("res/static/audioScroll.png");
-}
-
-div.titleScroll {
-  /* position: relative; */
-}
-
-div.contentWrapper {
-}
-
-div.content {
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-div.text {
-  font-family: serif;
-  color: white;
-  text-align: center;
-  font-size: 115%;
-  margin-left: 15%;
-  margin-right: 15%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  background-image: url("/res/StarterPub/static/darkWoodBack.png");
-}
-
-.overlay {
+  // ref for score overlay
   position: absolute;
-  width: 100%;
-  height: 100%;
+
+  #scoreText {
+    text-align: center;
+    font-family: medievalHeading;
+
+    position: relative;
+    font-size: 150%;
+    color: red;
+
+    padding-top: 2.5rem;
+  }
+}
+
+// MOVE TO UTILS ONCE WORKING
+
+%overlay-base {
+  position: absolute;
   z-index: 2;
+}
+
+.overlay-true-center {
+  @extend %overlay-base;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.overlay-top-center {
+  @extend %overlay-base;
   top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
 }
 
-p.Title {
-  margin-bottom: 5px;
-}
-p.subTitle {
-  font-size: 50%;
-  margin-top: 5px;
-  font: medievalHeading;
-}
+/* DICE CSS */
 
-/* DICE */
 .diceWrapper {
   text-align: center;
   justify-content: center;
@@ -381,67 +377,4 @@ button:hover {
   .dice {
     perspective: 1300px;
   }
-}
-
-.orcSpectator {
-  height: 300px;
-  width: 500px;
-  /* background-color: blue; */
-  top: 125%;
-  position: relative;
-  left: 15%;
-}
-
-.orc {
-  height: 300px;
-  width: 300px;
-  /* background-color: blue; */
-  float: left;
-  position: relative;
-  z-index: 1;
-}
-#orcSpeech {
-  height: 100px;
-  width: 200px;
-  float: left;
-  left: -20%;
-  top: -20%;
-  text-align: center;
-  font-family: medievalHeading;
-
-  position: relative;
-}
-
-#speechText {
-}
-
-.scoreboardWrapper {
-  height: 300px;
-  width: 300px;
-  top: 105%;
-  position: relative;
-  left: -10%;
-}
-
-.scoreboard {
-  height: 300px;
-  width: 300px;
-  /* background-color: blue; */
-  float: left;
-  position: relative;
-  z-index: 1;
-}
-
-#scoreText {
-  text-align: center;
-  font-family: medievalHeading;
-
-  position: relative;
-  top: 20%;
-  font-size: 150%;
-  color: red;
-}
-
-img#philosopher {
-  margin-top: 10%;
 }

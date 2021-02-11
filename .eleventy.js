@@ -4,6 +4,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy(path)
   })
 
+  eleventyConfig.addWatchTarget("styles")
+
   configObject = {
     dir: {
       input: "views", // default `.`

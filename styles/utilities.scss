@@ -1,4 +1,26 @@
 /* my first CSS file :) */
+/* Positioning */
+.ta-center {
+  text-align: center;
+}
+
+.flex-right {
+  align-self: flex-end;
+}
+
+/* Display */
+.inline-block {
+  display: inline-block;
+}
+
+/* Padding */
+
+/* Margins */
+.center-m {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /**************************************
 **			EXTERNAL LIBRARIES		 **
 **************************************/
