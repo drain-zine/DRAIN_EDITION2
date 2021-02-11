@@ -1,0 +1,125 @@
+body{
+	background-image: url("resources/images/background.png");
+}
+
+@font-face{
+	font-family:"medieval";
+	src: url("resources/fonts/monamourfraktur_broken/MonAmourFraktur-Broken.ttf");
+}
+header{
+	text-align: center;
+	color: white;
+}
+
+div.side_cont_l{
+	grid-area: a;
+	color: #F5F5F5;
+	display: block;
+	position: relative;
+}
+
+div.side_cont_r{
+	grid-area: c;
+	color: #F5F5F5;
+	display: block;
+	position: relative;
+}
+
+div.main_cont{
+	color: #F5F5F5;
+	display: grid;
+	float: left;
+	align-items: center;
+	justify-content: center;
+}
+
+a.col{
+	float: left;
+	grid-area: b;
+	color: #F5F5F5;
+	float: top;
+	flex: 0 0 33.33%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 5%;
+	text-decoration: none;
+}
+
+p{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 100%;
+}
+
+div.col{
+	float: left;
+	grid-area: b;
+	color: #F5F5F5;
+	float: top;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+div.nav{
+	grid-area: n;
+	color: #F5F5F5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2.5%;
+	background-image: url("resources/images/navbar.jpg");
+}
+
+div.link{
+	text-align: center;
+	display: block;
+	margin-bottom: 1px;
+	float: center;
+}
+
+div.border{
+	text-align: center;
+	display: block;
+	margin-bottom: 1px;
+	float: center;
+	border-style: solid;
+}
+
+#bot_img{
+	position: absolute;
+	bottom: 0;
+}
+
+h1{
+	
+}
+
+div.info_cont{
+	grid-area: i;
+	display: block;
+	text-align: center;
+	float: center;
+	vertical-align: text-top;
+	margin-bottom: 5%;
+	color: #F5F5F5;
+	background-image: url("resources/images/scroll1.png");
+}
+
+p.info{
+	font-family: "medieval";
+	font-size: 100%;
+}
+div.footer_img{
+
+}
+
+main{   display: grid;
+	grid-template-areas: "n n n n n"
+	      "a i i i c"
+	      "a b b b c"
+	      "a b b b c"
+	      "a b b b c"
+	      "f f f f f";
+	      grid-template-columns: auto lfr 20%;}
