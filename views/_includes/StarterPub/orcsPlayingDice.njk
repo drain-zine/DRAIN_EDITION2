@@ -43,7 +43,9 @@
     }
 
     function toggleSpeech(str) {
-      console.log(str)
+      var OrcText = [{{_OrcText | safe}}];
+      var textbox =  document.getElementById("orcSpeechText");
+      $(textbox).text(OrcText[Math.floor(Math.random()*OrcText.length)]);
       document.getElementById("orcSpeech").style.display = str
     }
 
@@ -61,6 +63,8 @@
     document.getElementById("roll-button").addEventListener("click", rollDice)
   })
 </script>
+
+
 {% endblock %} {% block content %}
 
 <header>
@@ -101,34 +105,8 @@
       </div>
 
       <div class="content">
-        <div class="text">
-          <p>
-            Since you’re in a pub, your mind drifts off to the proverbial
-            “mind-pub,” that is of course your innermost mental chamber for your
-            thoughts, its dialectical walls lined with taps pouring only the
-            finest muddy ale (not a lager boy, are ye?) someone like yourself can
-            find. Imagining the ouroboric cycle of you holding your Palace Pint
-            Glass, moving from tap to tap, filling your chalice carefully as to
-            not spill any on your Custom “Rick & Morty” Rick Dunks, and sipping,
-            you are startled by the click-clack cacophony of dice on a table.
-          </p>
-          <p>
-            Your attention turns to a few orcs playing what seems to be a classic
-            game of Liar’s Dice. Your orcish is rusty, and you can only catch the
-            faintest glimmer of what they’re saying, but you nonetheless can feel
-            the cool breeze of the sea, smell the deliciously moist socks of a
-            pirate at midday, and listen to the bickering of your crewmates
-            nearby—but this is all now just a distant, but pleasant memory. You’re
-            glad that you got to enjoy those days, wallowing in the filth as a
-            crusading, oceanic desperado, but your taste and inclinations are a
-            little more refined now. You wake up, look in the mirror, and vocalize
-            “Clean.” You think these orcs would definitely inspire a hype but
-            chill Bearbrick.
-          </p>
-          <p>
-            What was that? It’s hard to remember sometimes. You walk over to the
-            orcs, who have now noticed you staring at them, and take a seat...
-          </p>
+        <div class="text {{textBackground}}">
+          {%block textbox_text %}{% endblock %}
         </div>
       </div>
 
@@ -144,9 +122,7 @@
       <img src="/res/StarterPub/dynamic/orc1.gif"/>
       <div id="orcSpeech" style="display: none">
         <img src="/res/StarterPub/static/speechBubble.png"/>
-        <div class="overlay-true-center ta-center dirtyHACK">
-          <p>Zug Zug,</p>
-          <p>nice roll mate!</p>
+        <div id="orcSpeechText" class="overlay-true-center ta-center dirtyHACK">
         </div>
       </div>
     </div>
