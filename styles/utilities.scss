@@ -1,5 +1,3 @@
-/* my first CSS file :) */
-/* Positioning */
 .ta-center {
   text-align: center;
 }
@@ -19,6 +17,11 @@
 .center-m {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* background stylings */
+.pub-dark-wood {
+  background-image: url("/res/StarterPub/static/darkWoodBack.png");
 }
 
 /**************************************

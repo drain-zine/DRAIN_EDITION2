@@ -1,0 +1,255 @@
+---
+---
+{% extends 'root.njk' %}
+
+{% block headScript %}
+<script>
+  // fading
+  $(document).ready(function () {
+    $("#pubBodyDiv").hide()
+    $("#pubBodyDiv").fadeIn(1500)
+
+    $("#exitButton").mouseover(function () {
+      console.log("mouse on")
+      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheers.gif")
+    })
+
+    $("#exitButton").mouseout(function () {
+      console.log("mouse off")
+      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheersStill.gif")
+    })
+
+    $("#exitButton").click(function () {
+      console.log("click!")
+      const audio = new Audio("/res/StarterPub/sound/cheers.mp3")
+      audio.play()
+      // $("#introBodyDiv").fadeOut(6000);
+      setTimeout("window.open('welcomeTraveller.html', '_self')", 2000)
+    })
+
+    function rollDice() {
+      var score = 0
+      const dice = [...document.querySelectorAll(".die-list")]
+      dice.forEach((die) => {
+        toggleClasses(die)
+        die.dataset.roll = getRandomNumber(1, 6)
+        score += parseInt(die.dataset.roll)
+      })
+
+      console.log(score)
+      document.getElementById("score").textContent = score.toString()
+      setTimeout(toggleSpeech, 2000, "block")
+      setTimeout(toggleSpeech.bind(null, "none"), 4000)
+    }
+
+    function toggleSpeech(str) {
+      var OrcText = [{{_OrcText | safe}}];
+      var textbox =  document.getElementById("orcSpeechText");
+      $(textbox).text(OrcText[Math.floor(Math.random()*OrcText.length)]);
+      document.getElementById("orcSpeech").style.display = str
+    }
+
+    function toggleClasses(die) {
+      die.classList.toggle("odd-roll")
+      die.classList.toggle("even-roll")
+    }
+
+    function getRandomNumber(min, max) {
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random() * (max - min + 1)) + min
+    }
+
+    document.getElementById("roll-button").addEventListener("click", rollDice)
+  })
+</script>
+
+
+{% endblock %} {% block content %}
+
+<header>
+  <div class="container">
+    <div class="headerScroll">
+      <img
+        src="/res/StarterPub/static/headerScroll1.png"
+      />
+      <div class="overlay-true-center">
+        <p class="Title">Ye Olde Fountain</p>
+        <p class="subTitle">The Orcs Playing Dice by the Bar...</p>
+        <audio controls autoplay loop>
+          <source src="/res/StarterPub/sound/orcs2.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <aside class="left-sidebar"></aside>
+  <aside class="right-sidebar">
+  <div class="dynamicButton">
+      <img
+          id="exitButton"
+          src="/res/StarterPub/dynamic/cheersStill.gif"
+        />
+        <p>Return To The Bar...</p>
+  </div>
+  </aside>
+
+  <div class="contentWrapper">
+    <div class="test">
+      <div class="inline-block">
+        <img src="/res/StarterPub/static/orcsDice.png" width="75%" />
+      </div>
+
+      <div class="content">
+        <div class="text {{textBackground}}">
+          {%block textbox_text %}{% endblock %}
+        </div>
+      </div>
+
+      
+      </div>
+    </div>
+  </div>
+</main>
+
+<main>
+  <aside class="left-sidebar">
+    <div class="orcSpectator">
+      <img src="/res/StarterPub/dynamic/orc1.gif"/>
+      <div id="orcSpeech" style="display: none">
+        <img src="/res/StarterPub/static/speechBubble.png"/>
+        <div id="orcSpeechText" class="overlay-true-center ta-center dirtyHACK">
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="right-sidebar">
+    <div class="scoreboardWrapper">
+      <div class="scoreboard">
+        <img src="/res/StarterPub/static/parchment.png"/ width=100%>
+      </div>
+      <div class="overlay-top-center">
+        <p id="scoreText">Score: <span id="score">0</span></p>
+      </div>
+    </div>
+  </aside>
+
+  <div class="contentWrapper">
+      <div class="diceWrapper">
+        <div class="dice">
+          <ol class="die-list even-roll" data-roll="1" id="die-1">
+            <li class="die-item" data-side="1">
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="2">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="3">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="4">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="5">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="6">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+          </ol>
+          <ol class="die-list odd-roll" data-roll="1" id="die-2">
+            <li class="die-item" data-side="1">
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="2">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="3">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="4">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="5">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="6">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="buttonWrapper">
+          <button type="button" id="roll-button">Roll Dice</button>
+        </div>
+      </div>
+  </div>
+</main>
+
+
+
+
+
+{#
+  <div class="sidebar left">
+    <div class="orcSpectator">
+      <div class="orc"><img src="/res/StarterPub/dynamic/orc1.gif"/ width=100%></div>
+      <div id="orcSpeech" style="display: none">
+        <img class="header" src="/res/StarterPub/static/speechBubble.png" width="100%" />
+        <div class="overlay">
+          <p id="speechText">Zug Zug,</p>
+          <p>nice roll mate!</p>
+        </div>
+      </div>
+    </div>
+  </main> 
+
+
+  <div class="sidebar right">
+    
+
+    <div class="scoreboardWrapper">
+      <div class="scoreboard">
+        <img src="/res/StarterPub/static/parchment.png"/ width=100%>
+      </div>
+      <div class="overlay">
+        <p id="scoreText">Score: <span id="score">0</span></p>
+      </div>
+    </div>
+  </div> #}
+{% endblock %}
