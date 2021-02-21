@@ -3,6 +3,7 @@
   <head>
     {% include "head.njk" %}
 
+    <link rel="stylesheet" type="text/css" href="/styles/tailwind.css" />
     <link rel="stylesheet" type="text/css" href="/styles/utilites.css" />
     <link rel="stylesheet" type="text/css" href="/styles/variables.css" />
     <link rel="stylesheet" type="text/css" href="{{ paths.fileCssHref }}" />
@@ -12,7 +13,7 @@
     {% endblock %}
   </head>
 
-  <body style="margin: 0">
+  <body>
     {% block content %}
     {% endblock %}
   </body>
