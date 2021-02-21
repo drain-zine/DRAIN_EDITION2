@@ -1,0 +1,279 @@
+body{
+  //background-image: url("resources/images/paper-background.jpg");
+    background-color: black;
+}
+
+header{
+	text-align: center;
+color: white;
+}
+
+// remove these to revert and change border colors to black
+
+h1{
+    color: white;
+}
+
+h1.teaser{
+font-size: 300%;
+}
+p{
+    color: white;
+}
+
+div.link_container{
+	border-top: 5px double white;
+	margin-bottom: 2.5%;
+	overflow: auto;
+}
+
+div.link_container_2{
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+	overflow: auto;
+}
+#demo{
+	font-size: 125%
+}
+
+img.content{
+border:1px solid white;
+}
+
+a.col{
+	float: left;
+	/*float: top;
+	flex: 0 0 33.33%;
+	display: flex;*/
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2.5%;
+	margin-top: 2.5%;
+	text-decoration: none;
+	width: 33.3%;
+}
+
+div.flav{
+	float: left;
+	float: top;
+	flex: 0 0 33.33%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2.5%;
+	margin-top: 2.5%;
+	text-decoration: none;
+	width: 33.3%;
+	height: 100%;
+}
+
+div.article{
+	float: left;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2.5%;
+	margin-top: 2.5%;
+	text-decoration: none;
+	width: 33.3%;
+	height: 100%;
+	line-height: 2;
+}
+
+div.article{
+	float: left;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2.5%;
+	margin-top: 2.5%;
+	text-decoration: none;
+	width: 33.3%;
+	height: 100%;
+	line-height: 2;
+}
+
+div.random_content{
+	float: left;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2.5%;
+	margin-top: 2.5%;
+	text-decoration: none;
+	text-align:center;
+	width: 33.3%;
+	height: 100%;
+}
+
+div.merch_content_text{
+	float: left;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 5%;
+	margin-top: 1.25%;
+	text-decoration: none;
+	text-align:center;
+	width: 33.3%;
+	height: 100%;
+	font-size: 113%;
+}
+
+div.nav{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2.5%;
+	background-image: url("resources/images/navbar.jpg");
+}
+
+div.link{
+	text-align: center;
+	display: block;
+	margin-bottom: 1px;
+	float: center;
+}
+
+div.image_content{
+	text-align: center;
+	display: block;
+	margin-bottom: 1px;
+	float: center;
+	margin-top: 2.5%;
+}
+
+div.image_content_2{
+	text-align: center;
+	display: block;
+	float: center;
+	margin-top: 2.5%;
+}
+
+div.info_cont{
+	display: block;
+	text-align: center;
+	float: center;
+	vertical-align: text-top;
+	margin-bottom: 2.5%;
+}
+
+div.content_container{
+	display: block;
+	text-align: center;
+	float: center;
+	vertical-align: text-top;
+	margin-bottom: 2.5%;
+	border-top: 5px double white;
+	margin-top: 2.5%;
+	overflow: auto;
+}
+
+div.bio_content{
+	display: block;
+	text-align: center;
+	float: center;
+	vertical-align: text-top;
+	margin-bottom: 10%;
+
+	margin-top: 5%;
+	width: 100%;
+	overflow: auto;
+	position:relative;
+}
+
+div.merch_content{
+	display: block;
+	text-align: center;
+	float: center;
+	vertical-align: text-top;
+	margin-bottom: 5%;
+
+	margin-top: 5%;
+	width: 100%;
+	overflow: auto;
+	position:relative;
+}
+
+div.links_content{
+	display: block;
+	text-align: center;
+	float: center;
+	vertical-align: text-top;
+	margin-bottom: 5%;
+
+	margin-top: 5%;
+	width: 100%;
+	overflow: auto;
+	position:relative;
+}	
+
+div.image_content{
+	display: block;
+	text-align: center;
+	float: center;
+	vertical-align: text-top;
+	margin-bottom: 10%;
+
+	margin-top: 2.5%;
+	width: 100%;
+	overflow: auto;
+	position:relative;
+}		
+
+div.bio_text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+div.links_wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  overflow: auto;
+}
+
+
+
+p.info_heading{
+	text-decoration: underline;
+}
+
+p.list{
+    margin: 0;
+    padding: 0;
+}
+
+table, td{
+	color: white;
+	border: 2px solid white;
+	border-collapse: collapse;
+	font-size: 17px;
+}
+
+table{
+	width: 100%;
+}
+
+a.info_link{
+	text-decoration: none;
+	color:inherit;
+}
+
+a:visited { 
+  color: red;
+}
+
+iframe{
+display: block;
+margin-left: auto;   /* Automatic margin from left */
+       margin-right: auto; /* Automatic margin from right */
+}
+
+p{
+	font-size: 125%;
+}
+p.info{
+	font-size: 100%;
+}
