@@ -8,8 +8,6 @@ body {
   height: 100%;
   /* min-height: 100vh; */
   margin: 0;
-  background-image: url("/res/StarterPub/static/pub.jpg");
-  background-repeat: repeat;
 }
 
 // header styling
@@ -146,31 +144,7 @@ main {
   }
 }
 
-// MOVE TO UTILS ONCE WORKING
-
-%overlay-base {
-  position: absolute;
-  z-index: 2;
-}
-
-.overlay-true-center {
-  @extend %overlay-base;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
-
-.overlay-top-center {
-  @extend %overlay-base;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 100%;
-}
-
 /* DICE CSS */
-
 .diceWrapper {
   text-align: center;
   justify-content: center;
@@ -228,6 +202,7 @@ main {
   padding: 1rem;
   width: 100%;
   margin: auto;
+  box-sizing: content-box;
 }
 
 .dot {

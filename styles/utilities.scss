@@ -2,13 +2,9 @@
   text-align: center;
 }
 
-.flex-right {
+/* flex */
+.flex-end {
   align-self: flex-end;
-}
-
-/* Display */
-.inline-block {
-  display: inline-block;
 }
 
 /* Padding */
@@ -22,6 +18,34 @@
 /* background stylings */
 .pub-dark-wood {
   background-image: url("/res/StarterPub/static/darkWoodBack.png");
+}
+
+.pub-light-wood {
+  background-image: url("/res/StarterPub/static/pub.jpg");
+  background: repeat;
+}
+
+/* Useful stuff */
+/* Div overlays */
+%overlay-base {
+  position: absolute;
+  z-index: 2;
+}
+
+.overlay-true-center {
+  @extend %overlay-base;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.overlay-top-center {
+  @extend %overlay-base;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
 }
 
 /**************************************
