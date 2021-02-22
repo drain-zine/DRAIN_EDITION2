@@ -117,11 +117,6 @@ main {
     img {
       width: 125%;
     }
-
-    // FIX - feels related to utility.scss not compiling? (ie no ta-center)
-    .dirtyHACK {
-      transform: translate(-20%, -70%);
-    }
   }
 }
 
