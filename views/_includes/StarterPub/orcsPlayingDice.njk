@@ -6,6 +6,8 @@
 <script>
   // fading
   $(document).ready(function () {
+    var textBoxTime = 2000;
+
     $("#pubBodyDiv").hide()
     $("#pubBodyDiv").fadeIn(1500)
 
@@ -35,18 +37,17 @@
         die.dataset.roll = getRandomNumber(1, 6)
         score += parseInt(die.dataset.roll)
       })
-
-      console.log(score)
-      document.getElementById("score").textContent = score.toString()
-      setTimeout(toggleSpeech, 2000, "block")
-      setTimeout(toggleSpeech.bind(null, "none"), 4000)
+  
+      setTimeout(toggleSpeech, textBoxTime, "block",score)
+      setTimeout(toggleSpeech.bind(null, "none"), 2*textBoxTime)
     }
 
-    function toggleSpeech(str) {
+    function toggleSpeech(str,score) {
       var OrcText = [{{_OrcText | safe}}];
       var textbox =  document.getElementById("orcSpeechText");
       $(textbox).text(OrcText[Math.floor(Math.random()*OrcText.length)]);
       document.getElementById("orcSpeech").style.display = str
+      document.getElementById("score").textContent = score.toString()
     }
 
     function toggleClasses(die) {
@@ -73,9 +74,9 @@
       <img
         src="/res/StarterPub/static/headerScroll1.png"
       />
-      <div class="overlay-true-center">
-        <p class="Title">Ye Olde Fountain</p>
-        <p class="subTitle">The Orcs Playing Dice by the Bar...</p>
+      <div class="overlay-true-center heading-primary-font">
+        <p class="Title text-6xl">Ye Olde Fountain</p>
+        <p class="subTitle text-4xl">The Orcs Playing Dice by the Bar...</p>
         <audio class="inline-block" controls autoplay loop>
           <source src="/res/StarterPub/sound/orcs2.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
@@ -103,7 +104,7 @@
         <img class="inline-block" src="/res/StarterPub/static/orcsDice.png" width="75%" />
 
       <div class="content">
-        <div class="text {{textBackground}}">
+        <div class="text paragraph-primary-font {{textBackground}}">
           {%block textbox_text %}{% endblock %}
         </div>
       </div>
@@ -120,7 +121,7 @@
       <img src="/res/StarterPub/dynamic/orc1.gif"/>
       <div id="orcSpeech" style="display: none">
         <img src="/res/StarterPub/static/speechBubble.png"/>
-        <div id="orcSpeechText" class="pt-1 overlay-top-center ta-center text-xs">
+        <div id="orcSpeechText" class="p-2.5 overlay-top-center ta-center text-lg paragraph-primary-font">
         </div>
       </div>
     </div>
@@ -213,7 +214,7 @@
         </div>
 
         <div class="buttonWrapper">
-          <button type="button" id="roll-button">Roll Dice</button>
+          <button type="button" id="roll-button" class="pub-dark-wood heading-primary-font">Roll Dice</button>
         </div>
       </div>
   </div>

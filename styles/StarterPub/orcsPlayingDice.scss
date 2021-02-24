@@ -67,10 +67,9 @@ main {
 
       // maybe generisize more and move to utility?
       .text {
-        font-family: serif;
         color: white;
+        font-size: 1.75rem;
         text-align: center;
-        font-size: 115%;
         margin-left: 15%;
         margin-right: 15%;
         padding-left: 5%;
@@ -112,10 +111,11 @@ main {
   #orcSpeech {
     // for overlay
     position: absolute;
-    transform: translate(100%, -100%);
+    transform: translate(50%, -100%);
 
     img {
-      width: 125%;
+      width: 150px;
+      height: auto;
     }
   }
 }
@@ -331,13 +331,13 @@ main {
 
 button {
   align-self: center;
-  background-color: #efefef;
   border: none;
-  color: #333;
-  font-size: 1.25rem;
+  color: white;
+  font-size: 1.5rem;
   font-weight: 700;
   justify-self: center;
   padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 button:hover {
   cursor: pointer;
