@@ -87,9 +87,11 @@
         <img class="inline-block" src="/res/StarterPub/static/orcsDice.png" width="75%" />
 
       <div class="content">
-        <div class="text paragraph-primary-font {{textBackground}}">
-          {%block textbox_text %}{% endblock %}
-        </div>
+        <!--<div class="text paragraph-primary-font {{textBackground}}">
+          </div>
+        -->
+          {% import "StarterPub/partials/textBox.njk" as textBox %}
+          {{ textBox.textBox(textbox_text,textBackground,'','py-1 px-5', 'mx-15') }}
       </div>
 
       
