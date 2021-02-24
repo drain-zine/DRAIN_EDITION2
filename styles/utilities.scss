@@ -24,6 +24,43 @@
   background-image: url("/res/StarterPub/static/pub.jpg");
 }
 
+.pub-fantasty-busy {
+  background-image: url("/res/StarterPub/static/busyTavern.jpg");
+  background-image: no-repeat;
+  background-size: cover;
+}
+
+.pub-fantasy-cursed {
+  background-image: url("/res/StarterPub/static/fantasy-tavern2.jpg");
+  background-image: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.background-black {
+  background-color: black;
+}
+
+/* Dividers */
+.metalDividerTop {
+  width: 100%;
+  z-index: 5;
+
+  background-image: url("/res/StarterPub/static/metalTop.gif");
+  background-repeat: repeat-x;
+}
+
+.metalDividerLeft {
+  background-image: url("/res/StarterPub/static/metalLeft.gif");
+  background-repeat: repeat-y;
+}
+
+.metalDividerRight {
+  background-image: url("/res/StarterPub/static/metalRight.gif");
+  background-repeat: repeat-y;
+  background-position: right;
+}
+
 /* Useful stuff */
 /* Div overlays */
 %overlay-base {
