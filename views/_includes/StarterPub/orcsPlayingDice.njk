@@ -1,6 +1,7 @@
 ---
 ---
-{% extends 'root.njk' %}
+
+{% extends 'StarterPub/StarterPubroot.njk' %}
 
 {% block headScript %}
 <script>
@@ -66,26 +67,8 @@
 </script>
 
 
-{% endblock %} {% block content %}
-
-<header>
-  <div class="headerContainer">
-    <div class="headerScroll">
-      <img
-        src="/res/StarterPub/static/headerScroll1.png"
-      />
-      <div class="overlay-true-center heading-primary-font">
-        <p class="Title text-6xl">Ye Olde Fountain</p>
-        <p class="subTitle text-4xl">The Orcs Playing Dice by the Bar...</p>
-        <audio class="inline-block" controls autoplay loop>
-          <source src="/res/StarterPub/sound/orcs2.mp3" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-    </div>
-  </div>
-</header>
-
+{% endblock %} 
+{% block main %}
 <main>
 
   <aside class="left-sidebar"></aside>
