@@ -1,6 +1,7 @@
 ---
 ---
-{% extends 'root.njk' %}
+
+{% extends 'StarterPub/StarterPubroot.njk' %}
 
 {% block headScript %}
 <script>
@@ -66,26 +67,8 @@
 </script>
 
 
-{% endblock %} {% block content %}
-
-<header>
-  <div class="headerContainer">
-    <div class="headerScroll">
-      <img
-        src="/res/StarterPub/static/headerScroll1.png"
-      />
-      <div class="overlay-true-center heading-primary-font">
-        <p class="Title text-6xl">Ye Olde Fountain</p>
-        <p class="subTitle text-4xl">The Orcs Playing Dice by the Bar...</p>
-        <audio class="inline-block" controls autoplay loop>
-          <source src="/res/StarterPub/sound/orcs2.mp3" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-    </div>
-  </div>
-</header>
-
+{% endblock %} 
+{% block main %}
 <main>
 
   <aside class="left-sidebar"></aside>
@@ -104,9 +87,11 @@
         <img class="inline-block" src="/res/StarterPub/static/orcsDice.png" width="75%" />
 
       <div class="content">
-        <div class="text paragraph-primary-font {{textBackground}}">
-          {%block textbox_text %}{% endblock %}
-        </div>
+        <!--<div class="text paragraph-primary-font {{textBackground}}">
+          </div>
+        -->
+          {% import "StarterPub/partials/textBox.njk" as textBox %}
+          {{ textBox.textBox(textbox_text,textBackground,'','py-2 px-5','mx-14') }}
       </div>
 
       
@@ -121,7 +106,7 @@
       <img src="/res/StarterPub/dynamic/orc1.gif"/>
       <div id="orcSpeech" style="display: none">
         <img src="/res/StarterPub/static/speechBubble.png"/>
-        <div id="orcSpeechText" class="p-2.5 overlay-top-center ta-center text-lg paragraph-primary-font">
+        <div id="orcSpeechText" class="px-2.5 pb-2.5 pt-4 leading-4  overlay-top-center ta-center text-lg paragraph-primary-font">
         </div>
       </div>
     </div>
