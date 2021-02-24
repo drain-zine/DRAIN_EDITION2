@@ -1,5 +1,5 @@
-{%macro textBox(textbox_text, textBackground, font='paragraph-primary-font',fontSize='',padding='',margin='')%}
+{%macro textBox(textbox_text, textBackground,fontSize='',padding='',margin='', font='paragraph-primary-font')%}
 <div class="text {{textBackground}} {{font}} {{fontSize}} {{padding}} {{margin}}">
-    {{textbox_text}}
+    {{textbox_text | safe}}
 </div>
 {%endmacro%}
