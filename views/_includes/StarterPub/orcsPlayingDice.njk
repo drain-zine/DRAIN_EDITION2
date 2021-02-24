@@ -1,0 +1,207 @@
+---
+---
+
+{% extends 'StarterPub/StarterPubRoot.njk' %}
+
+{% block headScript %}
+<script>
+  // fading
+  $(document).ready(function () {
+    var textBoxTime = 2000;
+
+    $("#pubBodyDiv").hide()
+    $("#pubBodyDiv").fadeIn(1500)
+
+    $("#exitButton").mouseover(function () {
+      console.log("mouse on")
+      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheers.gif")
+    })
+
+    $("#exitButton").mouseout(function () {
+      console.log("mouse off")
+      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheersStill.gif")
+    })
+
+    $("#exitButton").click(function () {
+      console.log("click!")
+      const audio = new Audio("/res/StarterPub/sound/cheers.mp3")
+      audio.play()
+      // $("#introBodyDiv").fadeOut(6000);
+      setTimeout("window.open('welcomeTraveller.html', '_self')", 2000)
+    })
+
+    function rollDice() {
+      var score = 0
+      const dice = [...document.querySelectorAll(".die-list")]
+      dice.forEach((die) => {
+        toggleClasses(die)
+        die.dataset.roll = getRandomNumber(1, 6)
+        score += parseInt(die.dataset.roll)
+      })
+  
+      setTimeout(toggleSpeech, textBoxTime, "block",score)
+      setTimeout(toggleSpeech.bind(null, "none"), 2*textBoxTime)
+    }
+
+    function toggleSpeech(str,score) {
+      var OrcText = [{{_OrcText | safe}}];
+      var textbox =  document.getElementById("orcSpeechText");
+      $(textbox).text(OrcText[Math.floor(Math.random()*OrcText.length)]);
+      document.getElementById("orcSpeech").style.display = str
+      document.getElementById("score").textContent = score.toString()
+    }
+
+    function toggleClasses(die) {
+      die.classList.toggle("odd-roll")
+      die.classList.toggle("even-roll")
+    }
+
+    function getRandomNumber(min, max) {
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random() * (max - min + 1)) + min
+    }
+
+    document.getElementById("roll-button").addEventListener("click", rollDice)
+  })
+</script>
+
+
+{% endblock %} 
+{% block main %}
+<main>
+
+  <aside class="left-sidebar"></aside>
+  <aside class="right-sidebar">
+  <div class="dynamicButton">
+      <img
+          id="exitButton"
+          src="/res/StarterPub/dynamic/cheersStill.gif"
+        />
+        <p>Return To The Bar...</p>
+  </div>
+  </aside>
+
+  <div class="contentWrapper">
+      <div class="inline-block">
+        <img class="inline-block" src="/res/StarterPub/static/orcsDice.png" width="75%" />
+
+      <div class="content">
+        <!--<div class="text paragraph-primary-font {{textBackground}}">
+          </div>
+        -->
+          {% import "StarterPub/partials/textBox.njk" as textBox %}
+          {{ textBox.textBox(textbox_text,textBackground,'','py-2 px-5','mx-14') }}
+      </div>
+
+      
+      </div>
+    </div>
+  </div>
+</main>
+
+<main>
+  <aside class="left-sidebar">
+    <div class="orcSpectator">
+      <img src="/res/StarterPub/dynamic/orc1.gif"/>
+      <div id="orcSpeech" style="display: none">
+        <img src="/res/StarterPub/static/speechBubble.png"/>
+        <div id="orcSpeechText" class="px-2.5 pb-2.5 pt-4 leading-4  overlay-top-center ta-center text-lg paragraph-primary-font">
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="right-sidebar">
+    <div class="scoreboardWrapper">
+      <div class="scoreboard">
+        <img src="/res/StarterPub/static/parchment.png"/ width=100%>
+      </div>
+      <div class="overlay-top-center">
+        <p id="scoreText">Score: <span id="score">0</span></p>
+      </div>
+    </div>
+  </aside>
+
+  <div class="contentWrapper">
+      <div class="diceWrapper">
+        <div class="dice">
+          <ol class="die-list even-roll" data-roll="1" id="die-1">
+            <li class="die-item" data-side="1">
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="2">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="3">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="4">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="5">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="6">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+          </ol>
+          <ol class="die-list odd-roll" data-roll="1" id="die-2">
+            <li class="die-item" data-side="1">
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="2">
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="3">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="4">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="5">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="6">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="buttonWrapper">
+          <button type="button" id="roll-button" class="pub-dark-wood heading-primary-font">Roll Dice</button>
+        </div>
+      </div>
+  </div>
+</main>
+{% endblock %}

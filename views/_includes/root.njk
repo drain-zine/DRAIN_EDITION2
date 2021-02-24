@@ -4,16 +4,15 @@
     {% include "head.njk" %}
 
     <link rel="stylesheet" type="text/css" href="/styles/tailwind.css" />
-    <link rel="stylesheet" type="text/css" href="/styles/utilites.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/utilities.css" />
     <link rel="stylesheet" type="text/css" href="/styles/variables.css" />
     <link rel="stylesheet" type="text/css" href="{{ paths.fileCssHref }}" />
-    <link rel="stylesheet" type="text/css" href="{{ paths.parentCssHref }}" />
 
     {% block headScript %}
     {% endblock %}
   </head>
 
-  <body>
+  <body class="{{background}}">
     {% block content %}
     {% endblock %}
   </body>

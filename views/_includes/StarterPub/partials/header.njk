@@ -1,0 +1,17 @@
+<header>
+  <div class="headerContainer">
+    <div class="headerScroll">
+      <img
+        src="/res/StarterPub/static/headerScroll1.png"
+      />
+      <div class="overlay-true-center heading-primary-font">
+        <p class="Title text-6xl">{{title | safe}}</p>
+        <p class="subTitle text-4xl">{{subTitle | safe}}</p>
+        <audio class="inline-block" controls autoplay loop>
+          <source src="{{audioPath}}" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+</header>
