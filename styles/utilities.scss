@@ -37,16 +37,20 @@
   background-size: cover;
 }
 
+.grove {
+  background-image: url("/res/StarterPub/static/groveBackground2.png");
+  height: 1080px; /* temp */
+}
+
 .background-black {
   background-color: black;
 }
 
 /* Dividers */
-.metalDividerTop {
+.divider {
   width: 100%;
   z-index: 5;
 
-  background-image: url("/res/StarterPub/static/metalTop.gif");
   background-repeat: repeat-x;
 }
 

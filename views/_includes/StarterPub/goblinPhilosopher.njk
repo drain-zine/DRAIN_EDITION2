@@ -33,9 +33,8 @@
 {% block main %}
 
 <!-- feels hacky? sets height of div so background is shown (so it repeats on x)-->
-<div class="metalDividerTop ">
-  <img src="/res/StarterPub/static/metalTop.gif" style="visibility: hidden;" />
-</div>
+{% import "StarterPub/partials/transitionDivider.njk" as transition %}
+{{ transition.transition("/res/StarterPub/static/metalTop.gif") }}
 <main>
   <!-- also feels hacky with -2 margin -->
   <aside class="left-sidebar metalDividerLeft -mt-2"></aside>
