@@ -3,54 +3,18 @@
 {% extends 'StarterPub/StarterPubRoot.njk' %}
 
 {% block headScript %}
-<script>
-  // fading
-  $(document).ready(function () {
-    $("#pubBodyDiv").hide()
-    $("#pubBodyDiv").fadeIn(1500)
+<script src="/scripts/cursorImgTracking.js"></script>
+{%endblock%}
 
-    if ($("#groveBodyDiv").is(":hover")) {
-    }
-
-    $("#groveBodyDiv")
-      .mouseenter(function () {
-        console.log("hover")
-        $("#introCursor").show()
-        $(document).mousemove(function (e) {
-          $("#introCursor").css("left", e.pageX + "px")
-          $("#introCursor").css("top", e.pageY + "px")
-        })
-      })
-      .mouseleave(function () {
-        $("#introCursor").hide()
-      })
-
-    $("#exitButton").mouseover(function () {
-      console.log("mouse on")
-      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheers.gif")
-    })
-
-    $("#exitButton").mouseout(function () {
-      console.log("mouse off")
-      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheersStill.gif")
-    })
-
-    $("#exitButton").click(function () {
-      console.log("click!")
-      const audio = new Audio("/res/StarterPub/sound/cheers.mp3")
-      audio.play()
-      // $("#introBodyDiv").fadeOut(6000);
-      setTimeout("window.open('welcomeTraveller.html', '_self')", 2000)
-    })
-  })
-</script>
-{% endblock %} 
 {% block main %}
- <main>
+
+{% import "StarterPub/partials/transitionDivider.njk" as transition %}
+{{ transition.transition("/res/StarterPub/static/metalTop.gif") }}
+
+<main>
   <!-- also feels hacky with -2 margin -->
   <aside class="left-sidebar metalDividerLeft -mt-2"></aside>
-  <aside class="right-sidebar metalDividerRight -mt-2">
-  </aside>
+  <aside class="right-sidebar metalDividerRight -mt-2"></aside>
 
   <div class="contentWrapper inline-block mt-10"> 
     <div class="content">
@@ -59,12 +23,12 @@
     </div>
   </div>
 </main>
-<!---
-<div id="groveBodyDiv">
-  <div id="borderOverlay"></div>
-  
-     <img src="/res/StarterPub/dynamic/starBorder.gif"> --->
-  </div>
-  <img id="introCursor" src="/res/StarterPub/dynamic/sparkle.gif" />
-</div>-->
+
+{% import "StarterPub/partials/transitionDivider.njk" as transition %}
+{{ transition.transition("/res/StarterPub/dynamic/starBorder.gif",'','-mt-2','absolute')}}
+
+<main class="{{groveBackground}}">
+  <img id="cursorImg" src="/res/StarterPub/dynamic/sparkle.gif" />
+</main>
 {% endblock %}
+

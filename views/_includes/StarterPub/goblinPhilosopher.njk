@@ -2,34 +2,6 @@
 ---
 {% extends 'StarterPub/StarterPubRoot.njk' %}
 
-{% block headScript %}
-<script>
-  // fading
-  $(document).ready(function () {
-    $("#pubBodyDiv").hide()
-    $("#pubBodyDiv").fadeIn(1500)
-
-    $("#exitButton").mouseover(function () {
-      console.log("mouse on")
-      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheers.gif")
-    })
-
-    $("#exitButton").mouseout(function () {
-      console.log("mouse off")
-      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheersStill.gif")
-    })
-
-    $("#exitButton").click(function () {
-      console.log("click!")
-      const audio = new Audio("/res/StarterPub/sound/cheers.mp3")
-      audio.play()
-      // $("#introBodyDiv").fadeOut(6000);
-      setTimeout("window.open('welcomeTraveller.html', '_self')", 2000)
-    })
-  })
-</script>
-{% endblock %} 
-
 {% block main %}
 
 <!-- feels hacky? sets height of div so background is shown (so it repeats on x)-->

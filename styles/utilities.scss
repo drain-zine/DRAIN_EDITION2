@@ -88,6 +88,12 @@
   width: 100%;
 }
 
+/* Cursor Overlays */
+#cursorImg {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
 /**************************************
 **			EXTERNAL LIBRARIES		 **
 **************************************/
