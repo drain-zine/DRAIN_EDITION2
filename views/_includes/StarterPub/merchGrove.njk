@@ -3,7 +3,7 @@
 {% extends 'StarterPub/StarterPubRoot.njk' %}
 
 {% block headScript %}
-<script src="/scripts/cursorImgTracking.js"></script>
+
 {%endblock%}
 
 {% block main %}
@@ -28,7 +28,19 @@
 {{ transition.transition("/res/StarterPub/dynamic/starBorder.gif",'','-mt-2','absolute')}}
 
 <main class="{{groveBackground}}">
-  <img id="cursorImg" src="/res/StarterPub/dynamic/sparkle.gif" />
+  <img id="cursorImg" class="hidden w-1/12 z-0" src="/res/StarterPub/dynamic/sparkle.gif" />
 </main>
+
+<script src="/scripts/cursorImgTracking.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".{{groveBackground}}").mouseenter(function () {
+      $("#cursorImg").removeClass("hidden")
+    })
+    $(".{{groveBackground}}").mouseleave(function () {
+      $("#cursorImg").addClass("hidden")
+    })
+  })
+</script>
 {% endblock %}
 
