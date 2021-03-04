@@ -25,22 +25,59 @@
 </main>
 
 {% import "StarterPub/partials/transitionDivider.njk" as transition %}
-{{ transition.transition("/res/StarterPub/dynamic/starBorder.gif",'','-mt-2','absolute')}}
+{{ transition.transition("/res/StarterPub/dynamic/starBorder.gif",'','-mt-2','absolute','w-1/12')}}
 
-<main class="{{groveBackground}}">
+<main class="{{groveBackground}} justify-center items-center">
   <img id="cursorImg" class="hidden w-1/12 z-0" src="/res/StarterPub/dynamic/sparkle.gif" />
+  
+  <div class="riddleContainer flex flex-row">
+    <div class="riddleScroll flex w-1/2 justify-center relative">
+        <img
+          src="/res/StarterPub/static/scrollVert.png"
+        />
+        <div class="overlay-top-center mt-16 text-center heading-primary-font">
+          <form onsubmit="return false">
+            <label for="answer">First name:</label><br>
+            <input type="text" id="answer" name="answer">
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+    </div>
+
+    <div class="gnomeSpectator relative flex items-center ml-10">
+      <img class="w-3/4" src="/res/StarterPub/dynamic/gnomeFrog.gif"/>
+      <div class="absolute mb-4 top-1/4 left-1/2" id="speechContainer" style="display: none">
+        <img src="/res/StarterPub/static/speechBubble.png"/>
+        <div id="speechText" class="px-2.5 pb-2.5 pt-4 leading-4  overlay-top-center ta-center text-lg paragraph-primary-font">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </main>
 
-<script src="/scripts/cursorImgTracking.js"></script>
-<script>
+{# <script src="/scripts/cursorImgTracking.js"></script> #}
+
+<script type="module">
+
+import {toggleSpeech} from '/scripts/toggleSpeech.js';
+
   $(document).ready(function () {
     $(".{{groveBackground}}").mouseenter(function () {
-      $("#cursorImg").removeClass("hidden")
-    })
+      $("#cursorImg").removeClass("hidden");
+    });
     $(".{{groveBackground}}").mouseleave(function () {
-      $("#cursorImg").addClass("hidden")
-    })
-  })
+      $("#cursorImg").addClass("hidden");
+    });
+
+    $("input[type='submit']").on("click", function(){
+        toggleSpeech(["Wagwan"],"block")
+        setTimeout(toggleSpeech.bind(null, "none"), 2000)
+
+    });
+
+  });
 </script>
 {% endblock %}
 
