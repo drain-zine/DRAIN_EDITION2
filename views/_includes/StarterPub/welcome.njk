@@ -1,0 +1,97 @@
+---
+---
+{% extends 'StarterPub/StarterPubRoot.njk' %}
+
+{% block headScript %}
+{% endblock %} 
+
+{% block main %}
+
+<main class="mt-24 relative">
+    <aside class="left-sidebar ml-5">
+    <div class="menuScroll absolute">
+      <img class="sidebar" src="/res/StarterPub/static/menu1.png" />
+
+      <div class="overlay-top-center text-center">
+        <h1 class="menuTitle heading-primary-font secondary-color">Menu</h1>
+        <p></p>
+
+        <p class="menuLink paragraph-primary-font">Fat Banana - £50</p>
+        <p></p>
+        <p class="menuLink paragraph-primary-font">Chrome Pig Hearts - £200</p>
+        <p></p>
+        <p class="menuLink paragraph-primary-font">EnglishEat's Special - £10</p>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="gnomeSmoking absolute">
+      <img class="w-full" src="/res/StarterPub/dynamic/gnomeSmoking.gif" /><a
+        class="annotationLink"
+        href="merchGrove.html"
+        ><p class="primary-color paragraph-primary-font">Approach the gnome smoking in the far corner...</p></a
+      >
+    </div>
+
+    </aside>
+
+    <aside class="right-sidebar">
+      <img class="sidebar" id="exitButton" src="/res/StarterPub/static/salonDoorStatic.png" />
+    
+      <div class="beer1 absolute">
+        <img class="sidebar" src="/res/StarterPub/static/beerMattWBeer.png" />
+      </div>
+    </aside>
+
+    <div class="contentWrapper inline-block mx-5"> 
+    <div class="content mb-20">
+        {% import "StarterPub/partials/textBox.njk" as textBox %}
+        {{ textBox.textBox(introText,textBackground,'','py-2 px-2','mx-5') }}
+    </div>
+  </div> 
+
+   {#  <div class="gnomeSmoking">
+      <img class="sidebar" src="/res/StarterPub/dynamic/gnomeSmoking.gif" /><a
+        class="annotationLink"
+        href="merchGrove.html"
+        >Approach the gnome smoking in the far corner...</a
+      >
+    </div>
+    <div class="beer1">
+      <img class="sidebar" src="/res/StarterPub/static/beerMattWBeer.png" />
+    </div>
+    <div class="pouch">
+      <img id="pouch" class="sidebar" src="/res/StarterPub/static/coinPouch2.png" />
+    </div>
+    <div class="beer2">
+      <img class="sidebar" id="rotate" src="/res/StarterPub/static/beerMattWStains.png" />
+    </div>
+    <div class="orc">
+      <div class="subSideBar">
+        <img
+          class="sidebar"
+          src="/res/StarterPub/dynamic/orc1.gif"
+          style="width: 80%; height: 80%"
+        />
+      </div>
+
+      <div class="subSideBar">
+        <img
+          class="sidebar"
+          src="/res/StarterPub/dynamic/dice3.gif"
+          style="width: 40%; height: 40%"
+        />
+      </div>
+
+      <a class="annotationLink" href="orcsPlayingDice.html"
+        >Buy into the game of dice being played by the Orcs...</a
+      >
+    </div>
+    <div class="mainContentBlock2">
+      <div id="mainContentWrapper">
+        <p>Cheers</p>
+      </div>
+    </div>
+  </div> #}
+</main>
+{% endblock %}

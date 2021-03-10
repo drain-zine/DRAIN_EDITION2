@@ -1,3 +1,8 @@
+$heading-primary-font: "medievalHeading";
+$paragraph-primary-font: "MedievalParagraph";
+$primary-color: #ffffff;
+$secondary-color: #b30000;
+
 @font-face {
   font-family: "medievalParagraph";
   src: url("/res/fonts/EnchantedLand.otf");
@@ -8,13 +13,16 @@
   src: url("/res/fonts/OldLondon.ttf");
 }
 
-$heading-primary-font: "medievalHeading";
-$paragraph-primary-font: "MedievalParagraph";
-
 .heading-primary-font {
   font-family: $heading-primary-font;
 }
 
 .paragraph-primary-font {
   font-family: $paragraph-primary-font;
+}
+.primary-color {
+  color: $primary-color;
+}
+.secondary-color {
+  color: $secondary-color;
 }

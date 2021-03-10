@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
-  grid-template-areas: "headerL headerL header header header headerR headerR" "sidebarTopL . mainContentBlock1 mainContentBlock1 mainContentBlock1 . sidebarTopR" "sidebarTopL . mainContentBlock1 mainContentBlock1 mainContentBlock1 . sidebarTopR" "gnomeSmoking . mainContentBlock1 mainContentBlock1 mainContentBlock1 . beer1" ". . mainContentBlock1 mainContentBlock1 mainContentBlock1 beer2 ." ". pouch mainContentBlock2 mainContentBlock2 mainContentBlock2 . ." "orc orc mainContentBlock2 mainContentBlock2 mainContentBlock2 . ." ". . . . . . .";
+  grid-template-areas: "sidebarTopL . mainContentBlock1 mainContentBlock1 mainContentBlock1 . sidebarTopR" "sidebarTopL . mainContentBlock1 mainContentBlock1 mainContentBlock1 . sidebarTopR" "gnomeSmoking . mainContentBlock1 mainContentBlock1 mainContentBlock1 . beer1" ". . mainContentBlock1 mainContentBlock1 mainContentBlock1 beer2 ." ". pouch mainContentBlock2 mainContentBlock2 mainContentBlock2 . ." "orc orc mainContentBlock2 mainContentBlock2 mainContentBlock2 . ." ". . . . . . .";
   width: 100vw;
   height: 100vh;
   gap: 10px;
