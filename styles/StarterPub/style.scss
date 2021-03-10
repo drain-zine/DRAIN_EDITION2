@@ -108,10 +108,55 @@ main {
   font-size: 125%;
 }
 
+.beer1,
+.beer2 {
+  width: 12%;
+}
+
 .beer1 {
   top: 70%;
-  width: 12%;
   right: 2%;
+}
+
+.beer2 {
+  top: 90%;
+  right: 12%;
+  transform: rotate(-40deg);
+}
+
+.orcDice {
+  top: 70%;
+  right: 1%;
+  font-size: 125%;
+  width: 10%;
+  text-align: center;
+}
+
+.coinPouch {
+  top: 73%;
+  right: 12%;
+  width: 10%;
+}
+
+.goblinTome {
+  top: -5%;
+  left: 15%;
+  text-align: center;
+  width: 10%;
+  font-size: 125%;
+}
+
+.dagger {
+  top: 10%;
+  right: 0%;
+  width: 17%;
+}
+
+.coinSpread {
+  top: 30%;
+  left: 0%;
+  width: 17%;
+  transform: rotate(70deg);
 }
 
 // ORCS PLAYING DICE
