@@ -17,28 +17,37 @@
 
 /* background stylings */
 .pub-dark-wood {
-  background-image: url("/res/StarterPub/static/darkWoodBack.png");
+  background-image: url("/res/StarterPub/static/pub-dark-wood.png");
+}
+
+.pub-dark-wood-table {
+  background-image: url("/res/StarterPub/static/pub-dark-wood-table.jpg");
+  background-size: cover;
 }
 
 .pub-light-wood {
-  background-image: url("/res/StarterPub/static/pub.jpg");
+  background-image: url("/res/StarterPub/static/pub-light-wood.jpg");
+}
+
+.pub-light-panels {
+  background-image: url("/res/StarterPub/static/pub-light-panels.jpg");
 }
 
 .pub-fantasty-busy {
-  background-image: url("/res/StarterPub/static/busyTavern.jpg");
+  background-image: url("/res/StarterPub/static/pub-fantasty-busy.jpg");
   background-image: no-repeat;
   background-size: cover;
 }
 
 .pub-fantasy-cursed {
-  background-image: url("/res/StarterPub/static/fantasy-tavern2.jpg");
+  background-image: url("/res/StarterPub/static/pub-fantasy-cursed.jpg");
   background-image: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.grove {
-  background-image: url("/res/StarterPub/static/groveBackground2.png");
+.grove-wooded-cave {
+  background-image: url("/res/StarterPub/static/grove-wooded-cave.png");
   height: 1080px; /* temp */
 }
 
