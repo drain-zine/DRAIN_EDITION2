@@ -6,6 +6,8 @@
 {% endblock %} 
 
 {% block main %}
+{% import "StarterPub/partials/transitionDivider.njk" as transition %}
+{{ transition.transition("/res/StarterPub/static/metalTop.gif") }}
 <main class="mt-24 relative">
     <aside class="left-sidebar ml-5">
       <div class="menuScroll absolute">
