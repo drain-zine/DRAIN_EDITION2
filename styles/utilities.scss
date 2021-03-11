@@ -27,10 +27,14 @@
 
 .pub-light-wood {
   background-image: url("/res/StarterPub/static/pub-light-wood.jpg");
+  background-repeat: repeat;
+  height: fit-content;
 }
 
 .pub-light-panels {
   background-image: url("/res/StarterPub/static/pub-light-panels.jpg");
+  background-repeat: repeat;
+  height: fit-content;
 }
 
 .pub-fantasty-busy {
