@@ -8,7 +8,7 @@
   width: 16%;
   top: 25%;
   left: 30%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .note-1 {
@@ -21,7 +21,7 @@
   width: 24%;
   top: 54%;
   right: 35%;
-  z-index: 1;
+  z-index: 2;
 
   div {
     img {
@@ -34,7 +34,7 @@
   width: 16%;
   top: 30%;
   right: 23%;
-  z-index: 0;
+  z-index: 1;
 }
 
 .note-horiz {
@@ -50,19 +50,68 @@
   width: 16%;
   top: 50%;
   right: 13%;
-  z-index: 0;
+  z-index: 3;
 }
 
 .note-egypt {
   width: 16%;
   top: 45%;
   left: 18%;
-  z-index: 0;
+  z-index: 1;
 }
 
 .tome {
   width: 20%;
   top: 40%;
   left: 42%;
+  z-index: 1;
+}
+
+.note-3 {
+  width: 16%;
+  top: 70%;
+  right: 23%;
+  z-index: 0;
+}
+
+.note-4 {
+  width: 12%;
+  top: 18%;
+  left: 23%;
+  z-index: 0;
+}
+
+.note-5 {
+  width: 12%;
+  top: 15%;
+  left: 10%;
+  z-index: 0;
+}
+
+.note-horiz-2 {
+  width: 20%;
+  top: 58%;
+  left: 26%;
+  z-index: 0;
+}
+
+.note-horiz-3 {
+  width: 20%;
+  top: 23%;
+  left: 40%;
+  z-index: 0;
+}
+
+.note-5 {
+  width: 16%;
+  top: 30%;
+  right: 23%;
+  z-index: 0;
+}
+
+.note-6 {
+  width: 12%;
+  top: 63%;
+  right: 5%;
   z-index: 0;
 }
