@@ -6,23 +6,23 @@
 <script>
   // fading
   $(document).ready(function () {
-    $("#noticeboardDiv").hide()
-    $("#noticeboardDiv").fadeIn(200)
+    $("main").hide()
+    $("main").fadeIn(200)
 
     $("#exitButton").click(function () {
       console.log("click!")
       const audio = new Audio("/res/Noticeboard/sound/enter.mp3")
       audio.play()
-      // $("#introBodyDiv").fadeOut(6000);
-      setTimeout("window.open('..\/overworld.html', '_self')", 1000)
+      $("main").fadeOut(1000);
+      setTimeout("window.open('/overworld.html', '_self')", 1000)
     })
   })
 </script>
 {% endblock %} 
 {% block content %}
-<main class="absolute noticeboard-wood">
+<main class="absolute noticeboard-wood bg-black">
   <img class="z-0 w-100 h-auto" src="/res/Noticeboard/static/noticeboard-wood.png" style="visibility: hidden;" />
-  <div class="absolute map">
+  <div id="exitButton" class="absolute map">
     <img
       src="/res/Noticeboard/dynamic/map.gif"
     /><p class="paragraph-primary-font text-white text-center">Return To The world...</p>
