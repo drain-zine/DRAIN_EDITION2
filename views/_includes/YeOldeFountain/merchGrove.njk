@@ -1,14 +1,14 @@
 ---
 ---
-{% extends 'StarterPub/StarterPubRoot.njk' %}
+{% extends 'YeOldeFountain/YeOldeFountainRoot.njk' %}
 
 {% block headScript %}
 {%endblock%}
 
 {% block main %}
 
-{% import "StarterPub/partials/transitionDivider.njk" as transition %}
-{{ transition.transition("/res/StarterPub/static/metalTop.gif") }}
+{% import "YeOldeFountain/partials/transitionDivider.njk" as transition %}
+{{ transition.transition("/res/YeOldeFountain/static/metalTop.gif") }}
 
 <main>
   <!-- also feels hacky with -2 margin -->
@@ -17,22 +17,22 @@
 
   <div class="contentWrapper inline-block mt-10"> 
     <div class="content mt-20 mb-20">
-        {% import "StarterPub/partials/textBox.njk" as textBox %}
+        {% import "YeOldeFountain/partials/textBox.njk" as textBox %}
         {{ textBox.textBox(textbox_text,textBackground,'','py-2 px-2','mx-8') }}
     </div>
   </div>
 </main>
 
-{% import "StarterPub/partials/transitionDivider.njk" as transition %}
-{{ transition.transition("/res/StarterPub/dynamic/starBorder.gif",'','-mt-2','absolute','w-1/12')}}
+{% import "YeOldeFountain/partials/transitionDivider.njk" as transition %}
+{{ transition.transition("/res/YeOldeFountain/dynamic/starBorder.gif",'','-mt-2','absolute','w-1/12')}}
 
 <main class="{{groveBackground}} justify-center items-center">
-  <img id="cursorImg" class="hidden w-1/12 z-20" src="/res/StarterPub/dynamic/sparkle.gif" />
+  <img id="cursorImg" class="hidden w-1/12 z-20" src="/res/YeOldeFountain/dynamic/sparkle.gif" />
   
   <div class="riddleContainer flex flex-row z-0">
     <div class="riddleScroll flex w-1/2 justify-center relative">
         <img
-          src="/res/StarterPub/static/scrollVert.png"
+          src="/res/YeOldeFountain/static/scrollVert.png"
         />
         <div class="overlay-top-center mt-20 text-center heading-primary-font">
           <form onsubmit="return false">
@@ -45,9 +45,9 @@
     </div>
 
     <div class="gnomeSpectator relative flex items-center ml-10">
-      <img class="w-3/4" src="/res/StarterPub/dynamic/gnomeFrog.gif"/>
+      <img class="w-3/4" src="/res/YeOldeFountain/dynamic/gnomeFrog.gif"/>
       <div class="absolute mb-4 top-1/10 left-1/3" id="speechContainer" style="display: none">
-        <img style="width: 200px" src="/res/StarterPub/static/speechBubble.png"/>
+        <img style="width: 200px" src="/res/YeOldeFountain/static/speechBubble.png"/>
         <div id="speechText" class="px-4 pb-2.5 pt-4 leading-4  overlay-top-center ta-center text-lg paragraph-primary-font">
         </div>
       </div>

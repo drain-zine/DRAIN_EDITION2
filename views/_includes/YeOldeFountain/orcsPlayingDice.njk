@@ -1,7 +1,7 @@
 ---
 ---
 
-{% extends 'StarterPub/StarterPubRoot.njk' %}
+{% extends 'YeOldeFountain/YeOldeFountainRoot.njk' %}
 
 {% block headScript %}
 <script type="module">
@@ -46,8 +46,8 @@ import {toggleSpeech} from '/scripts/toggleSpeech.js';
 
 {% endblock %} 
 {% block main %}
-{% import "StarterPub/partials/transitionDivider.njk" as transition %}
-{{ transition.transition("/res/StarterPub/static/metalTop.gif") }}
+{% import "YeOldeFountain/partials/transitionDivider.njk" as transition %}
+{{ transition.transition("/res/YeOldeFountain/static/metalTop.gif") }}
 <main>
 
   <aside class="left-sidebar"></aside>
@@ -56,7 +56,7 @@ import {toggleSpeech} from '/scripts/toggleSpeech.js';
   <div class="contentWrapper inline-block">
     <img class="inline-block" src="{{orcPath}}" width="75%" />
     <div class="content mt-20 mb-20">
-        {% import "StarterPub/partials/textBox.njk" as textBox %}
+        {% import "YeOldeFountain/partials/textBox.njk" as textBox %}
         {{ textBox.textBox(textbox_text,textBackground,'','py-2 px-5','mx-14') }}
     </div>
   </div>
@@ -65,9 +65,9 @@ import {toggleSpeech} from '/scripts/toggleSpeech.js';
 <main>
   <aside class="left-sidebar">
     <div class="orcSpectator">
-      <img src="/res/StarterPub/dynamic/orc1.gif"/>
+      <img src="/res/YeOldeFountain/dynamic/orc1.gif"/>
       <div id="speechContainer" class="absolute transform translate-x-1/2 -translate-y-full" style="display: none">
-        <img src="/res/StarterPub/static/speechBubble.png"/>
+        <img src="/res/YeOldeFountain/static/speechBubble.png"/>
         <div id="speechText" class="px-2.5 pb-2.5 pt-2 leading-4  overlay-top-center ta-center text-lg paragraph-primary-font">
         </div>
       </div>
@@ -77,7 +77,7 @@ import {toggleSpeech} from '/scripts/toggleSpeech.js';
   <aside class="right-sidebar">
     <div class="scoreboardWrapper">
       <div class="scoreboard">
-        <img src="/res/StarterPub/static/parchment.png"/ width=100%>
+        <img src="/res/YeOldeFountain/static/parchment.png"/ width=100%>
       </div>
       <div class="overlay-top-center">
         <p id="scoreText">Score: <span id="score">0</span></p>

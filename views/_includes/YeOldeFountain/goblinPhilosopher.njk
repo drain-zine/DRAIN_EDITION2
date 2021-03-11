@@ -1,12 +1,12 @@
 ---
 ---
-{% extends 'StarterPub/StarterPubRoot.njk' %}
+{% extends 'YeOldeFountain/YeOldeFountainRoot.njk' %}
 
 {% block main %}
 
 <!-- feels hacky? sets height of div so background is shown (so it repeats on x)-->
-{% import "StarterPub/partials/transitionDivider.njk" as transition %}
-{{ transition.transition("/res/StarterPub/static/metalTop.gif") }}
+{% import "YeOldeFountain/partials/transitionDivider.njk" as transition %}
+{{ transition.transition("/res/YeOldeFountain/static/metalTop.gif") }}
 <main>
   <!-- also feels hacky with -2 margin -->
   <aside class="left-sidebar metalDividerLeft -mt-2"></aside>
@@ -16,7 +16,7 @@
   <div class="contentWrapper inline-block mt-10"> 
     <img class="inline-block" src="{{goblinPath}}" width="75%" />
     <div class="content mt-20 mb-20">
-        {% import "StarterPub/partials/textBox.njk" as textBox %}
+        {% import "YeOldeFountain/partials/textBox.njk" as textBox %}
         {{ textBox.textBox(textbox_text,textBackground,'','py-2 px-2','mx-8') }}
     </div>
   </div>

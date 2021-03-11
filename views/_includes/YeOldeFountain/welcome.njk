@@ -1,17 +1,17 @@
 ---
 ---
-{% extends 'StarterPub/StarterPubRoot.njk' %}
+{% extends 'YeOldeFountain/YeOldeFountainRoot.njk' %}
 
 {% block headScript %}
 {% endblock %} 
 
 {% block main %}
-{% import "StarterPub/partials/transitionDivider.njk" as transition %}
-{{ transition.transition("/res/StarterPub/static/metalTop.gif") }}
+{% import "YeOldeFountain/partials/transitionDivider.njk" as transition %}
+{{ transition.transition("/res/YeOldeFountain/static/metalTop.gif") }}
 <main class="mt-24 relative">
     <aside class="left-sidebar ml-5">
       <div class="menuScroll absolute">
-        <img class="sidebar" src="/res/StarterPub/static/menu1.png" />
+        <img class="sidebar" src="/res/YeOldeFountain/static/menu1.png" />
 
         <div class="overlay-top-center text-center">
           <h1 class="menuTitle heading-primary-font secondary-color">Menu</h1>
@@ -30,27 +30,27 @@
         <a
           class="annotationLink"
           href="merchGrove.html"
-          ><img class="w-full" src="/res/StarterPub/dynamic/gnomeSmoking.gif" /><p class="primary-color paragraph-primary-font">Approach the gnome smoking in the far corner...</p></a
+          ><img class="w-full" src="/res/YeOldeFountain/dynamic/gnomeSmoking.gif" /><p class="primary-color paragraph-primary-font">Approach the gnome smoking in the far corner...</p></a
         >
       </div>
 
     </aside>
 
     <aside class="right-sidebar">
-      <img class="sidebar" id="homeButton" src="/res/StarterPub/static/salonDoorStatic.png" />
+      <img class="sidebar" id="homeButton" src="/res/YeOldeFountain/static/salonDoorStatic.png" />
     
       <div class="beer1 absolute">
-        <img class="sidebar" src="/res/StarterPub/static/beerMattWBeer.png" />
+        <img class="sidebar" src="/res/YeOldeFountain/static/beerMattWBeer.png" />
       </div>
 
       <div class="beer2 absolute">
-        <img class="sidebar" src="/res/StarterPub/static/beerMattWStains.png" />
+        <img class="sidebar" src="/res/YeOldeFountain/static/beerMattWStains.png" />
       </div>
     </aside>
 
     <div class="contentWrapper inline-block mx-5"> 
       <div class="content mb-20">
-          {% import "StarterPub/partials/textBox.njk" as textBox %}
+          {% import "YeOldeFountain/partials/textBox.njk" as textBox %}
           {{ textBox.textBox(introText,textBackground,'','py-8 px-16','mx-20') }}
       </div>
   </div> 
@@ -62,34 +62,34 @@
         <a
           class="annotationLink"
           href="goblinPhilosopher.html"
-          ><img class="w-full" src="/res/StarterPub/dynamic/tome.gif" /><p class="primary-color paragraph-primary-font">Ask the goblin what he is studying...</p></a
+          ><img class="w-full" src="/res/YeOldeFountain/dynamic/tome.gif" /><p class="primary-color paragraph-primary-font">Ask the goblin what he is studying...</p></a
         >
       </div>
 
       <div class="coinSpread absolute">
-        <img class="sidebar" src="/res/StarterPub/static/coinsSpread.png" />
+        <img class="sidebar" src="/res/YeOldeFountain/static/coinsSpread.png" />
       </div>
     </aside>
 
     <aside class="right-sidebar">
       <div class="dagger absolute">
-        <img class="sidebar" src="/res/StarterPub/static/dagger.png" />
+        <img class="sidebar" src="/res/YeOldeFountain/static/dagger.png" />
       </div>
       <div class="orcDice absolute">
         <a
           class="annotationLink"
-          href="/StarterPub/orcsPlayingDice.html"
-          ><img class="w-full" src="/res/StarterPub/dynamic/orc1.gif" /><p class="primary-color paragraph-primary-font">Buy into the game of dice being played by the Orcs...</p></a
+          href="/YeOldeFountain/orcsPlayingDice.html"
+          ><img class="w-full" src="/res/YeOldeFountain/dynamic/orc1.gif" /><p class="primary-color paragraph-primary-font">Buy into the game of dice being played by the Orcs...</p></a
         >
       </div>
       <div class="coinPouch absolute">
-        <img class="sidebar" src="/res/StarterPub/static/coinPouch2.png" />
+        <img class="sidebar" src="/res/YeOldeFountain/static/coinPouch2.png" />
       </div>
     </aside>
 
     <div class="contentWrapper inline-block mx-5"> 
     <div class="content mb-20">
-        {% import "StarterPub/partials/textBox.njk" as textBox %}
+        {% import "YeOldeFountain/partials/textBox.njk" as textBox %}
         {{ textBox.textBox(secondaryText,textBackground,'','py-8 px-16','mx-20') }}
     </div>
   </div> 
@@ -98,17 +98,17 @@
 $(document).ready(function(){
   $("#homeButton").mouseover(function () {
         console.log("mouse on")
-        $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/salonDoors.gif")
+        $(this).delay(1000).attr("src", "/res/YeOldeFountain/dynamic/salonDoors.gif")
       })
 
       $("#homeButton").mouseout(function () {
         console.log("mouse off")
-        $(this).delay(1000).attr("src", "/res/StarterPub/static/salonDoorStatic.png")
+        $(this).delay(1000).attr("src", "/res/YeOldeFountain/static/salonDoorStatic.png")
       })
 
       $("#homeButton").click(function () {
         console.log("click!")
-        const audio = new Audio("/res/StarterPub/sound/enter.mp3")
+        const audio = new Audio("/res/YeOldeFountain/sound/enter.mp3")
         audio.play()
         // $("#introBodyDiv").fadeOut(6000);
         setTimeout("window.open('/overworld.html', '_self')", 1000)
