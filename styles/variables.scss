@@ -13,12 +13,21 @@ $secondary-color: #b30000;
   src: url("/res/fonts/OldLondon.ttf");
 }
 
+@font-face {
+  font-family: "Magician";
+  src: url("/res/fonts/Magician.ttf");
+}
+
 .heading-primary-font {
   font-family: $heading-primary-font;
 }
 
 .paragraph-primary-font {
   font-family: $paragraph-primary-font;
+}
+
+.magician-font {
+  font-family: "Magician";
 }
 .primary-color {
   color: $primary-color;
