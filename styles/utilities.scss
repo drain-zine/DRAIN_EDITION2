@@ -37,10 +37,17 @@
   height: fit-content;
 }
 
-.pub-fantasty-busy {
-  background-image: url("/res/StarterPub/static/pub-fantasty-busy.jpg");
+.pub-fantasy-busy {
+  background-image: url("/res/StarterPub/static/pub-fantasy-busy.jpg");
   background-image: no-repeat;
   background-size: cover;
+}
+
+.pub-fantasy-busy-2 {
+  background-image: url("/res/StarterPub/static/pub-fantasy-busy-2.png");
+  background-image: no-repeat;
+  background-size: cover;
+  background-position-y: 25%;
 }
 
 .pub-fantasy-cursed {
@@ -48,6 +55,27 @@
   background-image: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.pub-fantasy-busy-lute {
+  background-image: url("/res/StarterPub/static/pub-fantasy-busy-lute.jpg");
+  background-image: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.pub-fantasy-busy-game {
+  background-image: url("/res/StarterPub/static/pub-fantasy-busy-game.jpg");
+  background-image: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.pub-fantasy-orcs {
+  background-image: url("/res/StarterPub/static/pub-fantasy-orcs.jpg");
+  background-image: no-repeat;
+  background-size: cover;
+  background-position-y: 80%;
 }
 
 .grove-wooded-cave {
