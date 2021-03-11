@@ -1,9 +1,7 @@
 module.exports = {
   permalink: (data) => {
-    if (
-      data.page.fileSlug == "overworld" ||
-      data.page.fileSlug == "Noticeboard"
-    )
+    topLevelFiles = ["overworld", "noticeboard"]
+    if (topLevelFiles.includes(data.page.fileSlug))
       return `/${data.page.fileSlug}.html`
     else return `/${data.page.filePathStem}.html`
   },
