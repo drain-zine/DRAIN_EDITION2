@@ -18,24 +18,40 @@
     })
   })
 </script>
-{% endblock %} {% block content %}
-<div id="noticeboardDiv">
-  <div class="grid-container">
-    <div class="Map">
-      <img
-        class="sidebar"
-        id="exitButton"
-        src="/res/Noticeboard/dynamic/map.gif"
-      />Return To The world...
-    </div>
-    <div class="Big-Note">
-      <img src="/res/Noticeboard/static/Big-Note.png" class="sidebar" />
-    </div>
-    <div class="Note-1">
-      <img src="/res/Noticeboard/static/Note-1.png" class="sidebar" />
-    </div>
-    <div class="Note-2"></div>
-    <div class="Note-3"></div>
+{% endblock %} 
+{% block content %}
+<main class="absolute noticeboard-wood">
+  <img class="z-0 w-100 h-auto" src="/res/Noticeboard/static/noticeboard-wood.png" style="visibility: hidden;" />
+  <div class="absolute map">
+    <img
+      src="/res/Noticeboard/dynamic/map.gif"
+    /><p class="paragraph-primary-font">Return To The world...</p>
   </div>
-</div>
+
+  <div class="absolute big-note">
+    <img src="/res/Noticeboard/static/Big-Note.png"  />
+    <div class="overlay-true-center">
+      <img src="/res/Noticeboard/static/friend.png" class="mx-auto w-3/4"/>
+    </div>
+  </div>
+
+  <div class="absolute note-1">
+    <img src="/res/Noticeboard/static/Note-1.png"  />
+    <div class="overlay-true-center">
+      <img src="/res/Noticeboard/static/lostDog.png" class="mx-auto"/>
+    </div>
+  </div>
+
+  <div class="absolute note-2">
+    <img src="/res/Noticeboard/static/note-2.png"  />
+    <div class="overlay-true-center">
+      <img src="/res/Noticeboard/static/ghost2.png" class="mx-auto w-3/4"/>
+    </div>
+  </div>
+  
+  <div class="absolute note-horiz">
+    <img src="/res/Noticeboard/static/note-horiz.png"  />
+  </div>
+
+</main>
 {% endblock %}
