@@ -6,7 +6,6 @@
 {% endblock %} 
 
 {% block main %}
-
 <main class="mt-24 relative">
     <aside class="left-sidebar ml-5">
       <div class="menuScroll absolute">
@@ -36,7 +35,7 @@
     </aside>
 
     <aside class="right-sidebar">
-      <img class="sidebar" id="exitButton" src="/res/StarterPub/static/salonDoorStatic.png" />
+      <img class="sidebar" id="homeButton" src="/res/StarterPub/static/salonDoorStatic.png" />
     
       <div class="beer1 absolute">
         <img class="sidebar" src="/res/StarterPub/static/beerMattWBeer.png" />
@@ -93,4 +92,25 @@
     </div>
   </div> 
 </main>
+<script>
+$(document).ready(function(){
+  $("#homeButton").mouseover(function () {
+        console.log("mouse on")
+        $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/salonDoors.gif")
+      })
+
+      $("#homeButton").mouseout(function () {
+        console.log("mouse off")
+        $(this).delay(1000).attr("src", "/res/StarterPub/static/salonDoorStatic.png")
+      })
+
+      $("#homeButton").click(function () {
+        console.log("click!")
+        const audio = new Audio("/res/StarterPub/sound/enter.mp3")
+        audio.play()
+        // $("#introBodyDiv").fadeOut(6000);
+        setTimeout("window.open('/overworld.html', '_self')", 1000)
+      })
+});
+</script>
 {% endblock %}
