@@ -1,3 +1,8 @@
+$heading-primary-font: "medievalHeading";
+$paragraph-primary-font: "MedievalParagraph";
+$primary-color: #ffffff;
+$secondary-color: #b30000;
+
 @font-face {
   font-family: "medievalParagraph";
   src: url("/res/fonts/EnchantedLand.otf");
@@ -8,8 +13,10 @@
   src: url("/res/fonts/OldLondon.ttf");
 }
 
-$heading-primary-font: "medievalHeading";
-$paragraph-primary-font: "MedievalParagraph";
+@font-face {
+  font-family: "Magician";
+  src: url("/res/fonts/Magician.ttf");
+}
 
 .heading-primary-font {
   font-family: $heading-primary-font;
@@ -17,4 +24,14 @@ $paragraph-primary-font: "MedievalParagraph";
 
 .paragraph-primary-font {
   font-family: $paragraph-primary-font;
+}
+
+.magician-font {
+  font-family: "Magician";
+}
+.primary-color {
+  color: $primary-color;
+}
+.secondary-color {
+  color: $secondary-color;
 }

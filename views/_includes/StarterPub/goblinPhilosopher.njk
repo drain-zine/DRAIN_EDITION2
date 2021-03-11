@@ -2,40 +2,11 @@
 ---
 {% extends 'StarterPub/StarterPubRoot.njk' %}
 
-{% block headScript %}
-<script>
-  // fading
-  $(document).ready(function () {
-    $("#pubBodyDiv").hide()
-    $("#pubBodyDiv").fadeIn(1500)
-
-    $("#exitButton").mouseover(function () {
-      console.log("mouse on")
-      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheers.gif")
-    })
-
-    $("#exitButton").mouseout(function () {
-      console.log("mouse off")
-      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheersStill.gif")
-    })
-
-    $("#exitButton").click(function () {
-      console.log("click!")
-      const audio = new Audio("/res/StarterPub/sound/cheers.mp3")
-      audio.play()
-      // $("#introBodyDiv").fadeOut(6000);
-      setTimeout("window.open('welcomeTraveller.html', '_self')", 2000)
-    })
-  })
-</script>
-{% endblock %} 
-
 {% block main %}
 
 <!-- feels hacky? sets height of div so background is shown (so it repeats on x)-->
-<div class="metalDividerTop ">
-  <img src="/res/StarterPub/static/metalTop.gif" style="visibility: hidden;" />
-</div>
+{% import "StarterPub/partials/transitionDivider.njk" as transition %}
+{{ transition.transition("/res/StarterPub/static/metalTop.gif") }}
 <main>
   <!-- also feels hacky with -2 margin -->
   <aside class="left-sidebar metalDividerLeft -mt-2"></aside>
@@ -44,7 +15,7 @@
 
   <div class="contentWrapper inline-block mt-10"> 
     <img class="inline-block" src="{{goblinPath}}" width="75%" />
-    <div class="content">
+    <div class="content mt-20 mb-20">
         {% import "StarterPub/partials/textBox.njk" as textBox %}
         {{ textBox.textBox(textbox_text,textBackground,'','py-2 px-2','mx-8') }}
     </div>

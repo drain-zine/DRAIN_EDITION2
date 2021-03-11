@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPairedShortcode("markdown", shortcodes.markdown)
 
   // Pass throughs
-  copyDirectories = ["res", "LinkedLounge", "ARCHIVE"]
+  copyDirectories = ["res", "LinkedLounge", "ARCHIVE", "scripts"]
   copyDirectories.map((path) => {
     eleventyConfig.addPassthroughCopy(path)
   })

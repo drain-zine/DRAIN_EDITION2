@@ -7,11 +7,11 @@
     "start": "cross-env NODE_ENV=development npm-run-all -l clean --parallel start:*",
     "start:sass": "sass --watch styles:_site/styles",
     "start:eleventy": "eleventy --serve",
-    "start:tailwind": "postcss styles/tailwind.css -o _site/styles/tailwind.css",
+    "start:tailwind": "postcss -w styles/_tailwind.css -o _site/styles/tailwind.css",
     "build": "cross-env NODE_ENV=production npm-run-all -l clean --sequential build:*",
     "build:sass": "sass --update styles:_site/styles",
     "build:eleventy": "eleventy",
-    "build:tailwind": "postcss styles/tailwind.css -o _site/styles/tailwind.css",
+    "build:tailwind": "postcss styles/_tailwind.css -o _site/styles/tailwind.css",
     "lint": "prettier -w ."
   },
   "repository": {

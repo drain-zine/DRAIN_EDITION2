@@ -1,241 +1,119 @@
-@font-face {
-  font-family: medievalParagraph;
-  src: url("/res/fonts/EnchantedLand.otf");
+.map {
+  width: 8%;
+  right: 12%;
+  top: 25%;
+  cursor: pointer;
 }
 
-@font-face {
-  font-family: medievalHeading;
-  src: url("/res/fonts/OldLondon.ttf");
+.big-note {
+  width: 16%;
+  top: 25%;
+  left: 30%;
+  z-index: 3;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    ". . . . . . . ."
-    ". .  Big-Note . . . Map . "
-    ". . Big-Note . Note-3 . . . "
-    ". . Big-Note . . Note-1 . . "
-    ". . . . . Note-1 . ."
-    ". . Note-2 Note-2 . . . ."
-    ". . . . . . . .";
-  width: 100%;
-  height: 100%;
+.note-1 {
+  width: 15%;
+  top: 57%;
+  right: 35%;
 }
 
-.Map {
-  grid-area: Map;
-  text-align: center;
-  color: white;
-}
-.Big-Note {
-  grid-area: Big-Note;
-}
-.Note-1 {
-  grid-area: Note-1;
-}
-.Note-2 {
-  grid-area: Note-2;
-}
-.Note-3 {
-  grid-area: Note-3;
+.note-1 {
+  width: 24%;
+  top: 54%;
+  right: 35%;
+  z-index: 2;
+
+  div {
+    img {
+      padding-top: 3rem;
+      width: 68%;
+    }
+  }
 }
 
-div#noticeboardDiv {
-  background-image: url("/res/Noticeboard/static/Noticeboard.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  position: relative;
+.note-2 {
+  width: 16%;
+  top: 30%;
+  right: 23%;
+  z-index: 1;
 }
 
-div#groveBodyDiv {
-  background-image: url("/res/Noticeboard/static/groveBackground.png");
-  background-size: auto;
-  height: max-content;
-  /* background-color: black; */
+.note-horiz {
+  width: 20%;
+  top: 60%;
+  left: 10%;
+  z-index: 3;
+
+  font-family: Papyrus;
 }
 
-.header {
-  grid-area: header;
-  text-align: center;
-  vertical-align: middle;
-  font-family: medievalHeading;
-  font-size: 300%;
-  position: relative;
-  color: #b30000;
-}
-
-.headerL {
-  grid-area: headerL;
-  float: left;
-  max-width: 100%;
-  height: 10%;
+.note-poetry {
+  width: 16%;
   top: 50%;
-  position: relative;
-  transform: translateY(-50%);
+  right: 13%;
+  z-index: 3;
 }
 
-.headerR {
-  grid-area: headerR;
+.note-egypt {
+  width: 16%;
+  top: 45%;
+  left: 18%;
+  z-index: 1;
 }
 
-.sidebarTopL {
-  grid-area: sidebarTopL;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-  min-height: 0;
+.tome {
+  width: 20%;
+  top: 40%;
+  left: 42%;
+  z-index: 1;
 }
 
-.sidebarTopR {
-  grid-area: sidebarTopR;
+.note-3 {
+  width: 16%;
+  top: 70%;
+  right: 23%;
+  z-index: 0;
 }
 
-.mainContentBlock1 {
-  grid-area: mainContentBlock1;
-  background: no-repeat url("/res/Noticeboard/static/table2.jpg") 50% / 100%;
-  background-position: center;
-  /*background-size: contain;*/
+.note-4 {
+  width: 12%;
+  top: 18%;
+  left: 23%;
+  z-index: 0;
 }
 
-.beer1 {
-  grid-area: beer1;
+.note-5 {
+  width: 12%;
+  top: 15%;
+  left: 10%;
+  z-index: 0;
 }
 
-.gnomeSmoking {
-  grid-area: gnomeSmoking;
-  text-align: center;
+.note-horiz-2 {
+  width: 20%;
+  top: 58%;
+  left: 26%;
+  z-index: 0;
 }
 
-.pouch {
-  grid-area: pouch;
+.note-horiz-3 {
+  width: 20%;
+  top: 23%;
+  left: 40%;
+  z-index: 0;
 }
 
-.beer2 {
-  grid-area: beer2;
+.note-5 {
+  width: 16%;
+  top: 30%;
+  right: 23%;
+  z-index: 0;
 }
 
-.orc {
-  grid-area: orc;
-  text-align: center;
-}
-
-.mainContentBlock2 {
-  grid-area: mainContentBlock2;
-  background-image: url("/res/Noticeboard/static/darkWoodBack.png");
-  background-size: contain;
-}
-
-.subSideBar {
-  float: left;
-  width: 50%;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-}
-
-img.header {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 30%;
-  width: 60%;
-}
-
-img.headerL {
-  float: left;
-  height: 175px;
-  width: 175px;
-  top: 50%;
-  position: relative;
-
-  transform: translateY(-50%);
-}
-
-img.sidebar {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /*height: 100%;*/
-  width: 100%;
-}
-
-img#rotate {
-  transform: rotate(-40deg);
-}
-
-.overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.menuOverlay {
-  position: absolute;
-  left: 5%;
+.note-6 {
+  width: 12%;
+  top: 63%;
   right: 5%;
-  top: 1%;
-  bottom: 50px;
-  /* transform: translate(-50%, -50%); */
-  font-family: medievalParagraph;
-  font-size: 150%;
-}
-
-.menuTitle {
-  font-family: medievalHeading;
-  color: #b30000;
-}
-
-.menuLink {
-  font-family: medievalParagraph;
-}
-
-#mainContentWrapper {
-  font-family: serif;
-  color: white;
-  text-align: center;
-  font-size: 125%;
-  padding: 30px;
-}
-
-.inlineImg {
-  width: 25%;
-  height: 25%;
-}
-
-img#freeImage {
-  width: 80%;
-  height: 80%;
-}
-
-img#pouch {
-  height: 60%;
-  width: 60%;
-  top: 50%;
-  position: relative;
-  transform: translateY(-50%);
-}
-
-#headerControls {
-  float: right;
-  top: 50%;
-  position: relative;
-  transform: translateY(-50%);
-}
-
-.annotationLink {
-  text-align: center;
-  font-size: 150%;
+  z-index: 0;
 }

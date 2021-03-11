@@ -4,31 +4,13 @@
 {% extends 'StarterPub/StarterPubRoot.njk' %}
 
 {% block headScript %}
-<script>
+<script type="module">
+import {toggleSpeech} from '/scripts/toggleSpeech.js';
   // fading
   $(document).ready(function () {
     var textBoxTime = 2000;
-
-    $("#pubBodyDiv").hide()
-    $("#pubBodyDiv").fadeIn(1500)
-
-    $("#exitButton").mouseover(function () {
-      console.log("mouse on")
-      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheers.gif")
-    })
-
-    $("#exitButton").mouseout(function () {
-      console.log("mouse off")
-      $(this).delay(1000).attr("src", "/res/StarterPub/dynamic/cheersStill.gif")
-    })
-
-    $("#exitButton").click(function () {
-      console.log("click!")
-      const audio = new Audio("/res/StarterPub/sound/cheers.mp3")
-      audio.play()
-      // $("#introBodyDiv").fadeOut(6000);
-      setTimeout("window.open('welcomeTraveller.html', '_self')", 2000)
-    })
+    var OrcText = [{{_OrcText | safe}}];
+    var i = 0;
 
     function rollDice() {
       var score = 0
@@ -38,17 +20,12 @@
         die.dataset.roll = getRandomNumber(1, 6)
         score += parseInt(die.dataset.roll)
       })
-  
-      setTimeout(toggleSpeech, textBoxTime, "block",score)
-      setTimeout(toggleSpeech.bind(null, "none"), 2*textBoxTime)
-    }
 
-    function toggleSpeech(str,score) {
-      var OrcText = [{{_OrcText | safe}}];
-      var textbox =  document.getElementById("orcSpeechText");
-      $(textbox).text(OrcText[Math.floor(Math.random()*OrcText.length)]);
-      document.getElementById("orcSpeech").style.display = str
-      document.getElementById("score").textContent = score.toString()
+      i = Math.floor(Math.random() * OrcText.length);
+      toggleSpeech(OrcText[i], textBoxTime, textBoxTime*2);
+      setTimeout(function(){
+        document.getElementById("score").textContent = score.toString();
+      }, textBoxTime);
     }
 
     function toggleClasses(die) {
@@ -69,6 +46,8 @@
 
 {% endblock %} 
 {% block main %}
+{% import "StarterPub/partials/transitionDivider.njk" as transition %}
+{{ transition.transition("/res/StarterPub/static/metalTop.gif") }}
 <main>
 
   <aside class="left-sidebar"></aside>
@@ -76,7 +55,7 @@
 
   <div class="contentWrapper inline-block">
     <img class="inline-block" src="{{orcPath}}" width="75%" />
-    <div class="content">
+    <div class="content mt-20 mb-20">
         {% import "StarterPub/partials/textBox.njk" as textBox %}
         {{ textBox.textBox(textbox_text,textBackground,'','py-2 px-5','mx-14') }}
     </div>
@@ -87,9 +66,9 @@
   <aside class="left-sidebar">
     <div class="orcSpectator">
       <img src="/res/StarterPub/dynamic/orc1.gif"/>
-      <div id="orcSpeech" style="display: none">
+      <div id="speechContainer" class="absolute transform translate-x-1/2 -translate-y-full" style="display: none">
         <img src="/res/StarterPub/static/speechBubble.png"/>
-        <div id="orcSpeechText" class="px-2.5 pb-2.5 pt-4 leading-4  overlay-top-center ta-center text-lg paragraph-primary-font">
+        <div id="speechText" class="px-2.5 pb-2.5 pt-2 leading-4  overlay-top-center ta-center text-lg paragraph-primary-font">
         </div>
       </div>
     </div>
@@ -185,6 +164,8 @@
           <button type="button" id="roll-button" class="pub-dark-wood heading-primary-font">Roll Dice</button>
         </div>
       </div>
+
+      <div class="clearfix"></div>
   </div>
 </main>
 {% endblock %}

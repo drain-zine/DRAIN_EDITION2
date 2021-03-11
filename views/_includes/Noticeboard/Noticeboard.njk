@@ -6,36 +6,91 @@
 <script>
   // fading
   $(document).ready(function () {
-    $("#noticeboardDiv").hide()
-    $("#noticeboardDiv").fadeIn(200)
+    $("main").hide()
+    $("main").fadeIn(200)
 
     $("#exitButton").click(function () {
       console.log("click!")
       const audio = new Audio("/res/Noticeboard/sound/enter.mp3")
       audio.play()
-      // $("#introBodyDiv").fadeOut(6000);
-      setTimeout("window.open('..\/overworld.html', '_self')", 1000)
+      $("main").fadeOut(1000);
+      setTimeout("window.open('/overworld.html', '_self')", 1000)
     })
   })
 </script>
-{% endblock %} {% block content %}
-<div id="noticeboardDiv">
-  <div class="grid-container">
-    <div class="Map">
-      <img
-        class="sidebar"
-        id="exitButton"
-        src="/res/Noticeboard/dynamic/map.gif"
-      />Return To The world...
-    </div>
-    <div class="Big-Note">
-      <img src="/res/Noticeboard/static/Big-Note.png" class="sidebar" />
-    </div>
-    <div class="Note-1">
-      <img src="/res/Noticeboard/static/Note-1.png" class="sidebar" />
-    </div>
-    <div class="Note-2"></div>
-    <div class="Note-3"></div>
+{% endblock %} 
+{% block content %}
+<main class="absolute noticeboard-wood bg-black">
+  <img class="z-0 w-100 h-auto" src="/res/Noticeboard/static/noticeboard-wood.png" style="visibility: hidden;" />
+  <div id="exitButton" class="absolute map">
+    <img
+      src="/res/Noticeboard/dynamic/map.gif"
+    /><p class="paragraph-primary-font text-white text-center">Return To The world...</p>
   </div>
-</div>
+
+  <div class="absolute big-note">
+    <img src="/res/Noticeboard/static/Big-Note.png"  />
+    <div class="overlay-true-center">
+      <img src="/res/Noticeboard/static/friend.png" class="mx-auto w-3/4"/>
+    </div>
+  </div>
+
+  <div class="absolute note-1">
+    <img src="/res/Noticeboard/static/Note-1.png"  />
+    <div class="overlay-true-center">
+      <img src="/res/Noticeboard/static/lostDog.png" class="mx-auto"/>
+    </div>
+  </div>
+
+  <div class="absolute note-2">
+    <img src="/res/Noticeboard/static/note-2.png"  />
+    <div class="overlay-true-center">
+      <img src="/res/Noticeboard/static/ghost2.png" class="mx-auto w-3/4"/>
+    </div>
+  </div>
+  
+  <div class="absolute note-horiz">
+    <img src="/res/Noticeboard/static/note-horiz.png"  />
+    <div class="overlay-true-center">
+      <p class="px-6"><b>Looking for a tall adventurer who enjoys to travel, watching the office and cocktails!</b></p>
+    </div>
+  </div>
+
+  <div class="absolute note-poetry">
+    <img src="/res/Noticeboard/dynamic/poetry-note.gif"  />
+  </div>
+
+  <div class="absolute note-egypt">
+    <img src="/res/Noticeboard/dynamic/egypt-note.gif"  />
+  </div>
+
+  <div class="absolute tome">
+    <img src="/res/Noticeboard/static/tome.png" />
+  </div>
+
+  <div class="absolute note-3">
+    <img src="/res/Noticeboard/static/note-3.png" />
+  </div>
+
+  <div class="absolute note-horiz-2">
+    <img src="/res/Noticeboard/static/note-horiz-2.png" />
+  </div>
+
+  <div class="absolute note-horiz-3">
+    <img src="/res/Noticeboard/static/note-horiz-3.png" />
+  </div>
+
+  <div class="absolute note-4">
+    <img src="/res/Noticeboard/static/note-4.png" />
+  </div>
+
+  <div class="absolute note-5">
+    <img src="/res/Noticeboard/static/note-5.png" />
+  </div>
+
+  <div class="absolute note-6">
+    <img src="/res/Noticeboard/static/note-6.png" />
+  </div>
+
+</main>
 {% endblock %}

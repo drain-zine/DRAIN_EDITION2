@@ -1,0 +1,5 @@
+{%macro transition(pathToAsset,padding='',margin='',position='',size='')%}
+<div class="divider {{padding}} {{margin}} {{position}}" style="background-image: url({{pathToAsset}});">
+     <img class="{{size}}" src="{{pathToAsset}}" style="visibility: hidden;" />
+</div>
+{%endmacro%}

@@ -10,6 +10,10 @@ body {
   margin: 0;
 }
 
+// for fades
+html {
+  background-color: black;
+}
 // header styling
 header {
   .headerContainer {
@@ -76,9 +80,6 @@ main {
     justify-content: center;
 
     .content {
-      margin-top: 5rem;
-      margin-bottom: 5rem;
-
       // maybe generisize more and move to utility?
       .text {
         color: white;
@@ -90,7 +91,83 @@ main {
   }
 }
 
-// case-specific classes - ORCS PLAYING DICE
+// case-specific classes
+//MAIN
+.menuScroll {
+  font-size: 175%;
+}
+
+.inlineImg {
+  width: 25%;
+  height: 25%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gnomeSmoking {
+  top: 50%;
+  text-align: center;
+  width: 15%;
+  font-size: 125%;
+  cursor: pointer;
+}
+
+.beer1,
+.beer2 {
+  width: 12%;
+}
+
+.beer1 {
+  top: 70%;
+  right: 2%;
+}
+
+.beer2 {
+  top: 90%;
+  right: 12%;
+  transform: rotate(-40deg);
+}
+
+.orcDice {
+  top: 70%;
+  right: 1%;
+  font-size: 125%;
+  width: 10%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.coinPouch {
+  top: 73%;
+  right: 12%;
+  width: 10%;
+  cursor: pointer;
+}
+
+.goblinTome {
+  top: -5%;
+  left: 15%;
+  text-align: center;
+  width: 10%;
+  font-size: 125%;
+  cursor: pointer;
+}
+
+.dagger {
+  top: 10%;
+  right: 0%;
+  width: 17%;
+}
+
+.coinSpread {
+  top: 30%;
+  left: 0%;
+  width: 17%;
+  transform: rotate(70deg);
+}
+
+// ORCS PLAYING DICE
 .orcSpectator {
   display: flex;
   justify-content: center;
@@ -335,6 +412,13 @@ button:hover {
   cursor: pointer;
 }
 
+#cursorImg {
+  pointer-events: none;
+}
+
+.top-1\/10 {
+  top: 10%;
+}
 @media (min-width: 900px) {
   .dice {
     perspective: 1300px;

@@ -1,10 +1,15 @@
 {% extends 'root.njk' %}
 
-{% block headScript %}{%endblock%}
+{% block headScript %}
+
+{%endblock%}
 
 {% block content %}
+    <script src="/scripts/bodyFadeIn.js"></script>
 {% include 'StarterPub/partials/header.njk'  %}
 
 {% block main %}{% endblock %}
 {%include 'StarterPub/partials/footer.njk' %}
+
+    <script src="/scripts/exitButton.js"></script>
 {%endblock %}

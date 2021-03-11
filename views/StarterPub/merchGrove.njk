@@ -1,0 +1,71 @@
+---
+title: Ye Olde Fountain
+subTitle: The Gnome Smoking In The Corner....
+audioPath: /res/StarterPub/sound/chap.mp3
+background: background-black
+textBackground: background-black
+headerBackground: pub-fantasy-busy
+groveBackground: grove-wooded-cave
+---
+
+{% extends 'StarterPub/merchGrove.njk' %}
+
+
+{% set textbox_text %}
+    {% markdown %}
+        Your interest is piqued by a curious, verdant scent wafting out of a ominously shadowed corner of this otherwise completely average pub. The youths in your birth-town often loitered around the graveyard, listening to The Smiths and zooting pipe tobacco, but this feels different to you. As you walk towards this odor, the darkness is parted by a drifting cloud of green smoke, one that begins to take on the shape of a finger as you near it; you feel your nostrils, plagued by the advent of seasonal allergies, filled with the song of a thousand trees and the gleeful laughter of gnomes. Closing your eyes, you smile, but the gnomic chuckle grows louder. 
+        
+        “This is no simple reverie my friend!” exclaims a voice that pierces through this moment of serenity. You quickly shake your head to regain your composure, only to see an absolutely dripped out gnome in front of you. He lowers a silver-coated pipe into the light, revealing a strange insignia. 
+        
+        “You know what this is, my dumbfounded friend?” 
+        
+        Dumbfounded is right, you quietly think. What could this sign be? A cross in the middle, surrounded by a horseshoe like shape with the words “Gnome Hearts” inscribed in it; could this be some kind of metallurgic-gnomic-fungal cult, slowly ready to take over the world? Perhaps a fanatical band of equestrian-enthusiast religious zealots? 
+
+        “You know what I’m wearing, friend?” asks the gnome. “It’s all Gnome! Gnome Hearts, of course.” He steps up from a toadstool, also with this same logo, unveiling an outfit fully composed of this “Gnome Hearts,” from the most curled-up point of his shoes to the tippy-top of his traditional gnomic hat. 
+
+        “Reselling Off-White Nike Collabs has been crazy profitable my friend!” The gnome strokes his many rings. “You have some p you’re trying to spend?”
+
+        You have no idea what this very cool gnome is referring to, but you enthusiastically nod your head. 
+
+        “Hee hee! Come with me my good friend!” The gnome pulls up his long-sleeve GH jerkin, rubs his belly, and the Gnome Hearts insignia begins to glow on his belly button. He gestures for you to touch it, and you find that you can’t resist. As your finger traces this glowing outline, you realize that you’re no longer in the same pub...
+
+    {% endmarkdown %}
+{% endset %}
+
+
+{% set _riddles %}
+"I sneak with my slimes, I keep checking the time, I foam to the top, and alas what’s left is thine! Whom do you deem is I?",
+"I do declare, I do behest, to whom can I talk to about the endless halving of the rest?", 
+"Spin me, twist me, wet me, shat me out! Heh, what bit of griminess am I?", 
+"A hopping and roaring river runs through me, but it keeps growing higher! What am I?",
+"You move forward 10 steps, then take 10 steps back. How many steps have you taken?",
+"Oh, Star and star who can shine the brightest? Your knowledge deludes me with its writings and its madness? But pit against thine, oh my, I think about you all the time, and a solution we find in intellectual transcendence. Whose philosophy exactly was I?"
+{% endset %}
+
+{% set _answers %}
+"Guinness",
+"Xeno",
+"Beer Nuts",
+"Beer Mat",
+"20",
+"Hegel"
+{% endset %}
+
+{% set _gnomeResponsesCorrect %}
+"Cheers! Now looks like you’ve gotten to buy us a round!",
+"Why don’t you slow down a moment then, a sip of drink to spin yer head....",
+"[chewing noises]",
+"Don’t smell the table my friend, be the death of a weak constitution like yer own.",
+"Aye thank you, a friend owes me a barrel of mead now.",
+"Well read aren’t you.... But I can tell you haven’t read Wittgenstein. Read On Certainty and then maybe we can unpack this riddle a bit more."
+{% endset %}
+
+
+{% set _gnomeResponsesIncorrect %}
+"Shiver me mushrooms, that was bad! Hee hee, sound like a pirate, don’t I?",
+"Even I couldn’t dig up an answer of such a wrong variety...",
+"Me’ toes are crinklin’ with how incorrect you are...",
+"Did you really just say that? My dome hat just shrunk a bit...",
+"Your answer smells like rotten beans... the bad kind.... not the aged ones..."
+{% endset %}
+
