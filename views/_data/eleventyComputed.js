@@ -1,5 +1,12 @@
 module.exports = {
-  permalink: (data) => `/${data.page.filePathStem}.html`,
+  permalink: (data) => {
+    if (
+      data.page.fileSlug == "overworld" ||
+      data.page.fileSlug == "Noticeboard"
+    )
+      return `/${data.page.fileSlug}.html`
+    else return `/${data.page.filePathStem}.html`
+  },
   paths: {
     fileCssHref: (data) => `/styles${data.page.filePathStem}.css`,
     parentCssHref: (data) =>
