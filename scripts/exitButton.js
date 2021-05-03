@@ -11,7 +11,7 @@ $(document).ready(function () {
   $("#exitButton").click(function () {
     const audio = new Audio("/res/StarterPub/sound/cheers.mp3")
     audio.play()
-    // $("#introBodyDiv").fadeOut(6000);
-    setTimeout("window.open('welcome.html', '_self')", 2000)
+    $("body").fadeOut(1000)
+    setTimeout("window.open('welcome.html', '_self')", 1000)
   })
 })

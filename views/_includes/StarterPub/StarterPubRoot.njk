@@ -5,7 +5,11 @@
 {%endblock%}
 
 {% block content %}
-    <script src="/scripts/bodyFadeIn.js"></script>
+<script>
+    //<script src="/scripts/bodyFadeIn.js">
+    $("body").hide();
+    $("body").fadeIn(1500);
+</script>
 {% include 'StarterPub/partials/header.njk'  %}
 
 {% block main %}{% endblock %}
