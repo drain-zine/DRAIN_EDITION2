@@ -89,6 +89,18 @@ main {
       }
     }
   }
+
+  a {
+    color: DarkRed;
+  }
+
+  a:visited {
+    color: DarkGray;
+  }
+
+  a:hover {
+    color: red;
+  }
 }
 
 // case-specific classes

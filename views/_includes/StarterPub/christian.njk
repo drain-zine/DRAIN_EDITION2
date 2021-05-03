@@ -1,0 +1,29 @@
+---
+---
+
+{% extends 'StarterPub/StarterPubRoot.njk' %}
+
+
+{% block main %}
+{% import "StarterPub/partials/transitionDivider.njk" as transition %}
+ {% import "StarterPub/partials/textBox.njk" as textBox %}
+{{ transition.transition("/res/StarterPub/static/metalTop.gif") }}
+<main>
+
+  <aside class="left-sidebar"></aside>
+  <aside class="right-sidebar"></aside>
+
+  <div class="contentWrapper inline-block">
+    <img class="inline-block" src="{{orcPath}}" width="75%" />
+    <div class="content mt-20 mb-20">
+       
+        {{ textBox.textBox(textbox_1,textBackground,'','py-2 px-5','mx-14') }}
+        <img class="inline-block  my-16" src="{{articleImg1}}" width="30%" />
+        {{ textBox.textBox(textbox_2,textBackground,'','py-2 px-5','mx-14') }}
+        <img class="inline-block  my-16" src="{{articleImg2}}" width="50%" />
+        {{ textBox.textBox(textbox_3,textBackground,'','py-2 px-5','mx-14') }}
+    </div>
+  </div>
+</main>
+
+{% endblock %}
