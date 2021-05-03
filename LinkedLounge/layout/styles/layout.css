@@ -675,3 +675,9 @@ div.teamMember > h4{
 	opacity: 1; 
     transition: opacity 0.5s ease;
 }
+
+.footnoteSpacer{
+	height: 1rem;
+	margin-top: 1rem;
+	border-top: 1px solid gray;
+}
