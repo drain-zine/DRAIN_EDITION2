@@ -7,6 +7,8 @@
       <div class="overlay-true-center heading-primary-font">
         <p class="Title text-6xl">{{title | safe}}</p>
         <p class="subTitle text-4xl">{{subTitle | safe}}</p>
+
+      {% if subTitle != "PLACEHOLDER STUFF" %}
       <div class="dynamicButton text-2xl paragraph-primary-font">
         <img
           class="w-1/5"
@@ -15,6 +17,7 @@
           />
           <p>Return To The Bar...</p>
     </div>
+      {% endif %}
       </div>
     </div>
   </div>
