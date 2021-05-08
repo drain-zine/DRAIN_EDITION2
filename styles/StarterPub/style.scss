@@ -91,11 +91,11 @@ main {
   }
 
   a {
-    color: DarkRed;
+    color: #e6ba95;
   }
 
   a:visited {
-    color: DarkGray;
+    color: #7e644f;
   }
 
   a:hover {
@@ -177,6 +177,14 @@ main {
   cursor: pointer;
 }
 
+.article {
+  text-align: left !important;
+  font-family: "Times New Roman";
+
+  p {
+    padding-bottom: 4rem;
+  }
+}
 .dagger {
   top: 10%;
   right: 0%;

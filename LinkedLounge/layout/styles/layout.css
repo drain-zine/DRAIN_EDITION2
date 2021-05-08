@@ -65,7 +65,20 @@ File: Layout CSS
 .container{padding:80px 0;}
 
 /* Content */
-.container .content{}
+.container .content{
+	
+	font-size: 1.5rem;
+
+
+}
+
+.container .content h1{
+	font-size: 2.5rem;
+}
+
+.container .content  #footnote1{
+	font-family: 0.75rem !important;
+}
 
 .sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
 .sectiontitle *{margin:0;}
@@ -681,3 +694,4 @@ div.teamMember > h4{
 	margin-top: 1rem;
 	border-top: 1px solid gray;
 }
+
