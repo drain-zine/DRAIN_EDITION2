@@ -89,6 +89,18 @@ main {
       }
     }
   }
+
+  a {
+    color: #e6ba95;
+  }
+
+  a:visited {
+    color: #7e644f;
+  }
+
+  a:hover {
+    color: red;
+  }
 }
 
 // case-specific classes
@@ -118,6 +130,11 @@ main {
   width: 12%;
 }
 
+.christian {
+  width: 20%;
+  top: 30%;
+}
+
 .beer1 {
   top: 70%;
   right: 2%;
@@ -145,6 +162,12 @@ main {
   cursor: pointer;
 }
 
+.simon {
+  top: 60%;
+  left: 10%;
+  width: 20%;
+}
+
 .goblinTome {
   top: -5%;
   left: 15%;
@@ -154,6 +177,14 @@ main {
   cursor: pointer;
 }
 
+.article {
+  text-align: left !important;
+  font-family: "Times New Roman";
+
+  p {
+    padding-bottom: 4rem;
+  }
+}
 .dagger {
   top: 10%;
   right: 0%;
