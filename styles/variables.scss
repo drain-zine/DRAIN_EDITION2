@@ -1,5 +1,6 @@
 $heading-primary-font: "medievalHeading";
 $paragraph-primary-font: "MedievalParagraph";
+$article-font: "Garamond";
 $primary-color: #ffffff;
 $secondary-color: #b30000;
 
@@ -24,6 +25,10 @@ $secondary-color: #b30000;
 
 .paragraph-primary-font {
   font-family: $paragraph-primary-font;
+}
+
+.article-font {
+  font-family: $article-font;
 }
 
 .magician-font {
