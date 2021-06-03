@@ -1,6 +1,7 @@
 ---
 ---
 {% extends 'StarterPub/StarterPubRoot.njk' %}
+{% import "StarterPub/partials/textBox.njk" as textBox %}
 
 {% block main %}
 
@@ -16,7 +17,7 @@
   <div class="contentWrapper inline-block mt-10"> 
     <img class="inline-block" src="{{goblinPath}}" width="75%" />
     <div class="content mt-20 mb-20">
-        {% import "StarterPub/partials/textBox.njk" as textBox %}
+        
         {{ textBox.textBox(textbox_text,textBackground,'','py-2 px-2','mx-8') }}
     </div>
   </div>

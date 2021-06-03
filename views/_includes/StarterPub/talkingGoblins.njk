@@ -1,7 +1,8 @@
 ---
 ---
 {% extends 'StarterPub/StarterPubRoot.njk' %}
-
+{% import "StarterPub/partials/textBox.njk" as textBox %}
+{% import "StarterPub/partials/quoteBox.njk" as quoteBox %}
 {% block main %}
 
 <!-- feels hacky? sets height of div so background is shown (so it repeats on x)-->
@@ -14,9 +15,32 @@
   </aside>
 
   <div class="contentWrapper inline-block mt-10"> 
-    <img class="inline-block" src="{{goblinPath}}" width="75%" />
-    <div class="content mt-20 mb-20">
-        {% import "StarterPub/partials/textBox.njk" as textBox %}
+        {# <div class="primary-color article-font w-full flex mt-80">
+          <div class="flex flex-1 flex-col -ml-40">
+            <p class="text-4xl">Habbaþ gé ealu on þæ´m norðernan landum?</p>
+            <p class="text-red-600 text-2xl">Do you have ale in the north lands?</p>
+          </div>
+          <div  class="flex-1 -mt-40 ml-40">
+          <img width="w-1/2" src="/res/StarterPub/static/goblin1.png"/>
+          </div>
+        </div> #}
+        {{ quoteBox.quoteBox(text1,trans1, goblinA,"-ml-40") }}
+        {{ quoteBox.quoteBox(text2,trans2, goblinB,"-ml-10", "flex-row-reverse") }}
+        {{ quoteBox.quoteBox(text3,trans3, goblinA,"-ml-40") }}
+        {{ quoteBox.quoteBox(text4,trans4, goblinB,"-ml-40", "flex-row-reverse") }}
+
+        {{ quoteBox.quoteBox(text5,trans5, goblinA,"-ml-40") }}
+        {{ quoteBox.quoteBox(text6,trans6, goblinB,"-ml-10", "flex-row-reverse") }}
+        {{ quoteBox.quoteBox(text7,trans7, goblinA,"-ml-40") }}
+        {{ quoteBox.quoteBox(text8,trans8, goblinB,"-ml-40", "flex-row-reverse") }}
+
+        {{ quoteBox.quoteBox(text9,trans9, goblinA,"-ml-40") }}
+        {{ quoteBox.quoteBox(text10,trans10, goblinB,"-ml-10", "flex-row-reverse") }}
+        {{ quoteBox.quoteBox(text11,trans11, goblinA,"-ml-40") }}
+        {{ quoteBox.quoteBox(text12,trans12, goblinB,"-ml-40", "flex-row-reverse") }}
+
+
+
         {{ textBox.textBox(textbox_text,textBackground,'','py-2 px-2','mx-8') }}
     </div>
   </div>

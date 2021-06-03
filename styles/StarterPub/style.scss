@@ -429,6 +429,15 @@ main {
   grid-area: nine;
 }
 
+div.circular-portrait {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin: 0px auto;
+  margin-bottom: 3%;
+}
+
 button {
   align-self: center;
   border: none;

@@ -1,0 +1,12 @@
+{%macro quoteBox(text, subtext, img, left, flip="")%}
+    <div class="primary-color article-font w-full flex mt-80 {{flip}}">
+    <div class="flex flex-1 flex-col {{left}}">
+            <p class="text-4xl">{{text.replace("<p>","").replace("</p>","")}}</p>
+            <p class="text-red-600 text-2xl">{{subtext.replace("<p>","").replace("</p>","")}}</p>
+          </div>
+          <div  class="flex-1 -mt-40 ml-40">
+          <img width="w-1/2" src="{{img}}"/>
+    </div>
+    </div>
+
+{%endmacro%}

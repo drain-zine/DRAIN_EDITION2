@@ -5,36 +5,154 @@ audioPath: /res/StarterPub/sound/chap.mp3
 background: background-black
 textBackground: background-black
 headerBackground: pub-fantasy-busy-lute
-goblinPath: /res/StarterPub/static/goblinPhilosopher.png
+goblinA: /res/StarterPub/static/goblin1.png
+goblinB: /res/StarterPub/static/goblin2.png
 ---
 
 {% extends 'StarterPub/talkingGoblins.njk' %}
 
 
-{% set textbox_text %}
-    {% markdown %}
-        As you look around the pub, you spy an erudite-seeming, but tattered-looking goblin sitting at a table perfectly in the center, vulgarly fondling its nether reasons. Although disgusted, you can’t turn away. What is this goblin doing? Continuing to watch, you see it pull a ratty tome from down below, one so vile that green cartoonish stink lines actively shoot out of it. The goblin sips from a mug with a foul and dark crystalline liquid in it and belches loudly.
+{% set text1 %}
+{% markdown %}
+Habbaþ gé ealu on þæ´m norðernan landum?
+{% endmarkdown %}
+{% endset %}
 
-        “Hm, Sanchez! Theories of time travel here. Wormhole. Dialectic. Where’s my spork, heh. Humph!” mumbles this musty fellow.
+{% set text2 %}
+{% markdown %}
+Þæ´r habbaþ wé betere alu þonne hér.
+{% endmarkdown %}
+{% endset %}
 
-        This all sounds familiar, but you conclude that this goblin must just be a nerd. “I heard that! Hragh hrupgh” coughs the goblin as it turns to you. “You think I’m a nerd? I can hear your thoughts my friend... my mind is a proverbial and literal panopticon, come come, I must tell you something. Perhaps you won’t think I’m a nerd after I bestow this knowledge upon you.”
+{% set text3 %}
+{% markdown %}
+Nán wyrt is on þæ´m norðernan landum mid þe tó beterian hit.
+{% endmarkdown %}
+{% endset %}
 
-        You find yourself captivated by this goblin’s turn into linguistic lucidity and decide to make your way over.
+{% set text4 %}
+{% markdown %}
+Wé né behófiaþ wyrta mid þe tó beteria hit.
+{% endmarkdown %}
+{% endset %}
 
-        “Pube?” the goblin asks, extending a hair inexplicably connected in the form of a perfect ouroboros. “The snake eats itself. Two-heads. From consumption comes life. Do you understand?”
+{% set text5 %}
+{% markdown %}
+Þæt ealu þe wé drincaþ is mid mucgwyrte and wegbráde gebeterod
+{% endmarkdown %}
+{% endset %}
 
-        You shake your head ambivalently.
+{% set text6 %}
+{% markdown %}
+Úser alu is bí berggræse beterod, þe wæs bí scéapum gecowen; hit is mid gréate fram stángeate beterod; hit is mid þæ´m swáte þára dwerga þe hit maciaþ beterod
+{% endmarkdown %}
+{% endset %}
 
-        “BRECHT” belches the goblin, throwing the pube into the air. “No no no no, not the philosopher you two-legged numbskull, that’s just my ale speaking.” It smirks. “Are we the performers, or are we the audience? Reach into my pocket. You already have! The world is my pocket. Space is relative. Take a sip of my drink, and you’ll understand.”
+{% set text7 %}
+{% markdown %}
+Gif ic æ´fre swát and gréot drincan wille, þá scealt þú mé on þæ´m norþlandum findan, ac meaht þú mé for langre tíde básnian.
+{% endmarkdown %}
+{% endset %}
 
-        The goblin’s pubic hair floats with a feather-like serenity onto the bridge of your nose. You sneeze. You reach for the goblin’s beer, but it snatches it away.
+{% set text8 %}
+{% markdown %}
+*chuckles* Hú lang?
+{% endmarkdown %}
+{% endset %}
 
-        “No! You don’t understand! This IS the dialectic, but you’ll never see that if you keep drinking lager! Let me check my notes...” The goblin checks its notes. “Hm, yes, all going according to plan. Noted. Yes. Shoo now, I must return to my studies.”
+{% set text9 %}
+{% markdown %}
+Swá lang swá þú ácwellan básniende meaht.
+{% endmarkdown %}
+{% endset %}
 
-        The goblin throws its mug at your head, which you narrowly dodge. You don’t hear the glass breaking anywhere.
+{% set text10 %}
+{% markdown %}
+Gif ik on aluhúse básnige, betere béa hit.
+{% endmarkdown %}
+{% endset %}
 
-        “Hm, interesting.” It belches. “Transmutation. Pure air. element. Coexist. Jerry. Brecht. I MEAN him this time. Good. GO!”
+{% set text11 %}
+{% markdown %}
+Hwý cóme þú hér, gif þú þæt ealu on þæ´m norþlande forebirst?
+{% endmarkdown %}
+{% endset %}
 
-        You leave this goblin be and return to your table, unsure whether you’ve become enlightened or just more confused. Feeling an itch behind your ear, you reach to scratch it, only to find the goblin’s self-consuming pube somehow there...
-    {% endmarkdown %}
+{% set text12 %}
+{% markdown %}
+Má hæfþ líf þonne alu.
+{% endmarkdown %}
+{% endset %}
+
+
+{% set trans1 %}
+{% markdown %}
+Do you have ale in the north lands?
+{% endmarkdown %}
+{% endset %}
+
+{% set trans2 %}
+{% markdown %}
+We have better ale than here.
+{% endmarkdown %}
+{% endset %}
+
+{% set trans3 %}
+{% markdown %}
+There are no plants in the north lands to flavour it with.
+{% endmarkdown %}
+{% endset %}
+
+{% set trans4 %}
+{% markdown %}
+We do not need plants to flavour it with.
+{% endmarkdown %}
+{% endset %}
+
+{% set trans5 %}
+{% markdown %}
+The ale we drink is flavoured with [lists a couple of plants].
+{% endmarkdown %}
+{% endset %}
+
+{% set trans6 %}
+{% markdown %}
+Our ale is flavoured with mountain grass that has been twice gnawed by a sheep; it is flavoured with gravel from hillside passes; it is flavoured with the sweat of the goblins who make it.
+{% endmarkdown %}
+{% endset %}
+
+{% set trans7 %}
+{% markdown %}
+If I ever want to drink sweat and gravel, you will find me in the north, but you may be waiting a long time for me
+{% endmarkdown %}
+{% endset %}
+
+{% set trans8 %}
+{% markdown %}
+*chuckles* How long?
+{% endmarkdown %}
+{% endset %}
+
+{% set trans9 %}
+{% markdown %}
+So long that you might die waiting.
+{% endmarkdown %}
+{% endset %}
+
+{% set trans10 %}
+{% markdown %}
+If I am waiting in an ale-house, all the better.
+{% endmarkdown %}
+{% endset %}
+
+{% set trans11 %}
+{% markdown %}
+Why did you come here, if you prefer the ale in the north?
+{% endmarkdown %}
+{% endset %}
+
+{% set trans12 %}
+{% markdown %}
+There is more to life than ale.
+{% endmarkdown %}
 {% endset %}
